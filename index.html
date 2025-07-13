@@ -481,34 +481,41 @@
         }
 
         // Theme Toggle
-        const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
-        const themeToggleMobile = document.getElementById("theme-toggle-mobile");
-        const htmlElement = document.documentElement;
+        // Theme Toggle
+            const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
+            const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+            const htmlElement = document.documentElement;
 
-        function setTheme(isDark) {
-            if (isDark) {
-                htmlElement.classList.add("dark");
-                localStorage.setItem("theme", "dark");
-            } else {
-                htmlElement.classList.remove("dark");
-                localStorage.setItem("theme", "light");
-            }
-        }
+            function setTheme(isDark) {
+                    if (isDark) {
+                        htmlElement.classList.add("dark");
+                        localStorage.setItem("theme", "dark");
+                    } else {
+                        htmlElement.classList.remove("dark");
+                        localStorage.setItem("theme", "light");
+                    }
+}
 
-        // Check for saved theme
-        if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            setTheme(true);
-        } else {
-            setTheme(false);
-        }
+// Apply theme on page load
+(function() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        setTheme(true);
+    } else if (savedTheme === "light") {
+        setTheme(false);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        // If no theme is saved, check system preference
+        setTheme(true);
+    }
+})();
 
-        themeToggleDesktop.addEventListener("click", () => {
-            setTheme(!htmlElement.classList.contains("dark"));
-        });
-        themeToggleMobile.addEventListener("click", () => {
-            setTheme(!htmlElement.classList.contains("dark"));
-        });
 
+themeToggleDesktop.addEventListener("click", () => {
+    setTheme(!htmlElement.classList.contains("dark"));
+});
+themeToggleMobile.addEventListener("click", () => {
+    setTheme(!htmlElement.classList.contains("dark"));
+});
         // Mobile Menu
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
