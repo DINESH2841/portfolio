@@ -8,11 +8,8 @@
     <meta name="author" content="S. Dinesh">
     <title>S. Dinesh | Embedded & Software Engineer</title>
 
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for smooth scrolling and font */
@@ -49,7 +46,6 @@
     </style>
 </head>
 <body class="font-inter">
-    <!-- Sticky Header -->
     <header class="sticky top-0 z-50 bg-white bg-opacity-95 dark:bg-gray-900 dark:bg-opacity-95 shadow-md py-4 transition-colors duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="#about" class="text-2xl font-bold text-blue-600 dark:text-blue-400">S. Dinesh</a>
@@ -62,7 +58,6 @@
                 <a href="#achievements" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Achievements</a>
                 <a href="#contact" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Contact</a>
             </nav>
-            <!-- Mobile Menu Button -->
             <div class="md:hidden flex items-center space-x-4">
                 <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <i class="fas fa-moon hidden dark:inline-block"></i>
@@ -72,13 +67,11 @@
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
-            <!-- Desktop Theme Toggle -->
             <button id="theme-toggle-desktop" class="hidden md:block p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <i class="fas fa-moon hidden dark:inline-block"></i>
                 <i class="fas fa-sun dark:hidden"></i>
             </button>
         </div>
-        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-6 text-2xl">
             <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-50 text-3xl focus:outline-none">
                 <i class="fas fa-times"></i>
@@ -94,7 +87,6 @@
     </header>
 
     <main>
-        <!-- About Section -->
         <section id="about" class="min-h-screen flex items-center justify-center py-16 px-4 bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
             <div class="max-w-4xl mx-auto text-center">
                 <img src="https://placehold.co/150x150/ADD8E6/000000?text=SD" alt="S. Dinesh Profile Picture" class="w-36 h-36 rounded-full mx-auto mb-6 shadow-lg border-4 border-white dark:border-gray-700">
@@ -116,52 +108,44 @@
             </div>
         </section>
 
-        <!-- Education Section -->
         <section id="education" class="py-16 px-4 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Education</h2>
- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Bachelor's Degree -->
-    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
-        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">BE.Electronics and Communication Engineering</h3>
-        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">SIMATS University, Chennai</p>
-        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022 - 2026</p>
-        <p class="text-gray-600 dark:text-gray-400">
-            Focused on embedded systems, digital signal processing, communication networks, and software development. Gained hands-on experience with microcontrollers, circuit design, and programming languages like C, C++, and Python.
-        </p>
-    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">BE.Electronics and Communication Engineering</h3>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">SIMATS University, Chennai</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022 - 2026</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Focused on embedded systems, digital signal processing, communication networks, and software development. Gained hands-on experience with microcontrollers, circuit design, and programming languages like C, C++, and Python.
+                        </p>
+                    </div>
 
-    <!-- Higher Secondary Certificate -->
-    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
-        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Higher Secondary Certificate</h3>
-        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya Jr College, Tirupati</p>
-        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022</p>
-        <p class="text-gray-600 dark:text-gray-400">
-            Completed higher secondary education with a focus on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills, laying the groundwork for engineering studies.
-        </p>
-    </div>
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Higher Secondary Certificate</h3>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya Jr College, Tirupati</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Completed higher secondary education with a focus on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills, laying the groundwork for engineering studies.
+                        </p>
+                    </div>
 
-    <!-- Secondary School Certificate -->
-    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
-        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Secondary School Certificate</h3>
-        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya School, Tirupati</p>
-        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2020</p>
-        <p class="text-gray-600 dark:text-gray-400">
-            Successfully completed secondary school education, developing a strong academic foundation and discipline across core subjects including Mathematics, Science, and English.
-        </p>
-    </div>
-</div>
-
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Secondary School Certificate</h3>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya School, Tirupati</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2020</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Successfully completed secondary school education, developing a strong academic foundation and discipline across core subjects including Mathematics, Science, and English.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
             <div class="container mx-auto max-w-6xl">
                 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">My Projects</h2>
                 <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projects will be dynamically loaded here from GitHub -->
                     <div class="col-span-full text-center text-gray-600 dark:text-gray-400">
                         <i class="fas fa-spinner fa-spin text-4xl mb-4 text-blue-500"></i>
                         <p>Loading projects from GitHub...</p>
@@ -173,12 +157,10 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-16 px-4 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Skills</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Programming Languages -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
                         <i class="fas fa-code text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Languages</h3>
@@ -190,7 +172,6 @@
                             <li>SQL</li>
                         </ul>
                     </div>
-                    <!-- Embedded Systems -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
                         <i class="fas fa-microchip text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Embedded Systems</h3>
@@ -202,7 +183,6 @@
                             <li>Firmware Dev</li>
                         </ul>
                     </div>
-                    <!-- Web Development -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
                         <i class="fas fa-globe text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Web Development</h3>
@@ -214,7 +194,6 @@
                             <li>MongoDB</li>
                         </ul>
                     </div>
-                    <!-- AI/ML -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
                         <i class="fas fa-brain text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">AI/ML</h3>
@@ -225,7 +204,6 @@
                             <li>Data Analysis</li>
                         </ul>
                     </div>
-                    <!-- Tools & Platforms -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
                         <i class="fas fa-tools text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tools & Platforms</h3>
@@ -237,7 +215,6 @@
                             <li>AWS IoT (Basic)</li>
                         </ul>
                     </div>
-                    <!-- Other Skills -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
                         <i class="fas fa-cogs text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
                         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Other Skills</h3>
@@ -252,14 +229,12 @@
             </div>
         </section>
 
-<!-- Certifications Section -->
 <section id="certifications" class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
   <div class="container mx-auto max-w-4xl">
     <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Certifications</h2>
     <div class="relative">
       <div id="certifications-carousel" class="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide space-x-6 pb-4">
 
-        <!-- Oracle Certification -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Oracle+AI" alt="Oracle AI" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Oracle Cloud Infrastructure AI Foundations</h3>
@@ -268,8 +243,6 @@
           <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CAB88AFECDE920D3C82D15E2B788CBFEDE93CD1A72AC9AE160F8E317725E22B9" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- NPTEL Certifications -->
-        <!-- Internet of Things -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=IoT+NPTEL" alt="IoT NPTEL" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Internet of Things</h3>
@@ -278,7 +251,6 @@
           <a href="https://internalapp.nptel.ac.in/NOC/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S44850127604354562.pdf" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Programming in Java -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Java+NPTEL" alt="Programming in Java" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Programming in Java</h3>
@@ -287,7 +259,6 @@
           <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs105/Course/NPTEL24CS105S55080183004004004.pdf" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Python for Data Science -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Python+DS" alt="Python for Data Science" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Python for Data Science</h3>
@@ -296,7 +267,6 @@
           <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs54/Course/NPTEL24CS54S65410050330066931.pdf" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Joy of Computing -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Joy+of+Using+Python" alt="Joy of Computing" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">The Joy of Computing Using Python</h3>
@@ -305,8 +275,6 @@
           <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs20/Course/NPTEL23CS20S2334370204107181.jpg" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Great Learning Certifications -->
-        <!-- Python Fundamentals -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Python+Basics" alt="Python Fundamentals" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Python Fundamentals for Beginners</h3>
@@ -315,7 +283,6 @@
           <a href="https://www.mygreatlearning.com/certificate/UCGVIONM" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- HTML Front-End Dev -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=HTML+Dev" alt="HTML Dev" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Front End Development - HTML</h3>
@@ -324,7 +291,6 @@
           <a href="https://www.mygreatlearning.com/certificate/JCVTZKKT" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Python for Non-Programmers -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Python+Non+Programmers" alt="Python for Non-Programmers" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Python for Non-Programmers</h3>
@@ -333,17 +299,14 @@
           <a href="https://www.mygreatlearning.com/certificate/YKGYZBIT" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Udemy + SkillEcted -->
-        <!-- Java for Beginners -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Java+Udemy" alt="Java for Beginners" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Java for Beginners</h3>
           <p class="text-gray-600 dark:text-gray-400 text-sm">Issued by Udemy</p>
-          <p class="text-gray-500 dark:text-gray-400 text-xs">Issued: June 2025</p>
+          <p class="text-500 dark:text-gray-400 text-xs">Issued: June 2025</p>
           <a href="https://www.udemy.com/certificate/UC-f0482cb6-c7cf-4b21-b63e-114e9ebbc7ef/" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
         </div>
 
-        <!-- Quiz Game HTML/CSS -->
         <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
           <img src="https://placehold.co/300x200/ADD8E6/000000?text=Making+Quiz+Game" alt="Quiz Game" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
           <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Interactive Quiz Game (HTML & CSS)</h3>
@@ -354,7 +317,6 @@
 
       </div>
 
-      <!-- Carousel Navigation Buttons -->
       <button id="carousel-prev" class="absolute top-1/2 left-0 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 z-10">
         <i class="fas fa-chevron-left"></i>
       </button>
@@ -366,7 +328,6 @@
 </section>
 
 
-<!-- Achievements Section -->
 <section id="achievements" class="py-16 px-4 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
     <div class="container mx-auto max-w-4xl">
         <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Achievements</h2>
@@ -414,7 +375,6 @@
 </section>
 
 
-        <!-- Contact Section -->
         <section id="contact" class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
             <div class="container mx-auto max-w-2xl">
                 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Contact Me</h2>
@@ -422,193 +382,144 @@
                     <p class="text-center text-gray-700 dark:text-gray-300 mb-6">
                         Have a question or want to collaborate? Feel free to reach out!
                     </p>
-                    <!-- Contact Section -->
-<section id="contact" class="py-20 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Get in Touch</h2>
-    <p class="text-gray-600 dark:text-gray-400 mb-12">
-      Have a question, idea, or opportunity? Drop a message and I’ll get back to you!
-    </p>
+                    <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-6 text-left">
+                        <div>
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your Name"
+                                required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                            />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your.email@example.com"
+                                required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                            />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Your message here..."
+                                required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                        >
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
 
-    <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-6 text-left">
-      <div>
-        <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your Name"
-          required
-          class="w-full px-4 py-3 rounded-lg border shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-        />
-      </div>
-
-      <div>
-        <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="_replyto"
-          placeholder="your@email.com"
-          required
-          class="w-full px-4 py-3 rounded-lg border shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-        />
-      </div>
-
-      <div>
-        <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          placeholder="Your message..."
-          required
-          class="w-full px-4 py-3 rounded-lg border shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        Send Message <i class="fas fa-paper-plane"></i>
-      </button>
-    </form>
-  </div>
-</section>
-
-                </div>
-                <div class="mt-8 text-center text-gray-700 dark:text-gray-300">
-                    <p class="mb-4">Find me on social media:</p>
-                    <div class="flex justify-center space-x-6 text-2xl">
-                        <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/DINESH2841" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <!-- Add other social links as needed -->
-                        <a href="mailto:sevennidinesh@gmail.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-700 dark:text-gray-300 text-lg font-semibold mb-4">Or find me on:</p>
+                        <div class="flex justify-center space-x-6 text-3xl">
+                            <a href="https://linkedin.com/in/sevenni-dinesh" target="_blank" class="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500 transition-colors duration-200" aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/dinesh-2004" target="_blank" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:dinesh.sevenni@gmail.com" class="text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors duration-200" aria-label="Email Me">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-6 text-center text-sm transition-colors duration-300">
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
         <div class="container mx-auto px-4">
             <p>&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
-            <p class="mt-2">Built with <i class="fas fa-heart text-red-500"></i> using HTML, Tailwind CSS & JavaScript.</p>
+            <p class="mt-2">Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript for dynamic functionalities
-
-        // 1. Typing Effect for About Section
-        const typingEffectElement = document.getElementById('typing-effect');
-        const roles = ["Embedded Engineer", "Software Engineer", "AI Enthusiast", "IoT Developer", "Full-Stack Developer"];
-        let roleIndex = 0;
+        // Typing Effect
+        const phrases = ["Embedded Engineer", "Software Engineer", "AI Enthusiast", "IoT Developer", "Full-Stack Developer"];
+        let currentPhraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        const typingSpeed = 100; // milliseconds per character
-        const deletingSpeed = 50; // milliseconds per character
-        const delayBeforeTyping = 1000; // delay before starting to type next role
-        const delayBeforeDeleting = 1500; // delay before starting to delete
+        const typingEffectElement = document.getElementById("typing-effect");
+        const cursorElement = document.querySelector(".cursor");
 
         function type() {
-            const currentRole = roles[roleIndex];
+            const currentPhrase = phrases[currentPhraseIndex];
             if (isDeleting) {
-                // Deleting text
-                typingEffectElement.textContent = currentRole.substring(0, charIndex - 1);
+                typingEffectElement.textContent = currentPhrase.substring(0, charIndex - 1);
                 charIndex--;
             } else {
-                // Typing text
-                typingEffectElement.textContent = currentRole.substring(0, charIndex + 1);
+                typingEffectElement.textContent = currentPhrase.substring(0, charIndex + 1);
                 charIndex++;
             }
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                // Done typing, start deleting after a delay
-                setTimeout(() => isDeleting = true, delayBeforeDeleting);
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                setTimeout(() => isDeleting = true, 1500);
             } else if (isDeleting && charIndex === 0) {
-                // Done deleting, move to next role after a delay
                 isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(type, delayBeforeTyping);
-                return; // Exit to prevent immediate re-call
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
             }
 
-            const currentSpeed = isDeleting ? deletingSpeed : typingSpeed;
-            setTimeout(type, currentSpeed);
+            const typingSpeed = isDeleting ? 70 : 150;
+            setTimeout(type, typingSpeed);
         }
 
-        // Start typing effect on window load
-        window.onload = () => {
-            type();
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        };
-
-
-        // 2. Dark/Light Mode Toggle
-        const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        // Theme Toggle
+        const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
+        const themeToggleMobile = document.getElementById("theme-toggle-mobile");
         const htmlElement = document.documentElement;
 
-        // Function to set theme
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
+        function setTheme(isDark) {
+            if (isDark) {
+                htmlElement.classList.add("dark");
+                localStorage.setItem("theme", "dark");
             } else {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
+                htmlElement.classList.remove("dark");
+                localStorage.setItem("theme", "light");
             }
         }
 
-        // Check for saved theme preference or system preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
+        // Check for saved theme
+        if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            setTheme(true);
         } else {
-            setTheme('light'); // Default to light if no preference
+            setTheme(false);
         }
 
-        // Add event listeners for toggling theme
-        themeToggleDesktop.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
+        themeToggleDesktop.addEventListener("click", () => {
+            setTheme(!htmlElement.classList.contains("dark"));
+        });
+        themeToggleMobile.addEventListener("click", () => {
+            setTheme(!htmlElement.classList.contains("dark"));
         });
 
-        themeToggleMobile.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMobileMenuButton = document.getElementById("close-mobile-menu");
+
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.remove("hidden");
         });
 
-
-        // 3. Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-        });
-
-        closeMobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+        closeMobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
         });
 
         // Close mobile menu when a link is clicked
@@ -618,90 +529,94 @@
             });
         });
 
-
-        // 4. Certifications Carousel
-        const carousel = document.getElementById('certifications-carousel');
-        const prevButton = document.getElementById('carousel-prev');
-        const nextButton = document.getElementById('carousel-next');
-
-        // Function to scroll carousel
-        function scrollCarousel(direction) {
-            const scrollAmount = carousel.clientWidth * 0.8; // Scroll by 80% of visible width
-            if (direction === 'next') {
-                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            } else {
-                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            }
-        }
-
-        prevButton.addEventListener('click', () => scrollCarousel('prev'));
-        nextButton.addEventListener('click', () => scrollCarousel('next'));
-
-        // Optional: Hide/show arrows based on scroll position (more advanced)
-        carousel.addEventListener('scroll', () => {
-            // Logic to disable prev/next buttons if at start/end
-            // For simplicity, we'll keep them always active for now.
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
+        // Dynamically set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // 5. GitHub Repo Auto-fetch
-        const githubUsername = 'DINESH2841';
-        const projectsContainer = document.getElementById('projects-container');
-
-        async function fetchGitHubRepos() {
+        // Fetch GitHub Projects (Example - replace with your actual GitHub username)
+        async function fetchGitHubProjects() {
+            const username = 'dinesh-2004'; // Replace with your GitHub username
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = `
+                <div class="col-span-full text-center text-gray-600 dark:text-gray-400">
+                    <i class="fas fa-spinner fa-spin text-4xl mb-4 text-blue-500"></i>
+                    <p>Loading projects from GitHub...</p>
+                    <p class="text-sm mt-2 text-red-500 dark:text-red-400">
+                        Note: Project details from LinkedIn cannot be fetched due to API restrictions. Please check GitHub repositories for more info.
+                    </p>
+                </div>
+            `;
             try {
-                const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=9`); // Fetch up to 9 most recently updated repos
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`);
                 if (!response.ok) {
                     throw new Error(`GitHub API error: ${response.statusText}`);
                 }
                 const repos = await response.json();
 
-                projectsContainer.innerHTML = ''; // Clear loading message
-
                 if (repos.length === 0) {
-                    projectsContainer.innerHTML = `
-                        <div class="col-span-full text-center text-gray-600 dark:text-gray-400">
-                            <p>No public repositories found for ${githubUsername}.</p>
-                        </div>
-                    `;
+                    projectsContainer.innerHTML = `<p class="col-span-full text-center text-gray-600 dark:text-gray-400">No public repositories found on GitHub.</p>`;
                     return;
                 }
 
+                projectsContainer.innerHTML = ''; // Clear loading message
+
                 repos.forEach(repo => {
                     const projectCard = `
-                        <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600 flex flex-col">
-                            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-3">${repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">${repo.description || 'No description available.'}</p>
+                        <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600 flex flex-col h-full">
+                            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">${repo.name.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">${repo.description || 'No description available.'}</p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                ${repo.language ? `<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">${repo.language}</span>` : ''}
-                                ${repo.topics && repo.topics.length > 0 ? repo.topics.map(topic => `<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-900 dark:text-purple-300">${topic}</span>`).join('') : ''}
+                                ${repo.language ? `<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-900">${repo.language}</span>` : ''}
                             </div>
                             <div class="mt-auto flex justify-between items-center">
-                                <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 font-medium transition-colors duration-200">
-                                    View on GitHub <i class="fab fa-github ml-2"></i>
+                                <a href="${repo.html_url}" target="_blank" class="text-blue-500 hover:underline text-sm font-medium">
+                                    View Project <i class="fas fa-external-link-alt ml-1"></i>
                                 </a>
-                                ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-200 font-medium transition-colors duration-200">
-                                    Live Demo <i class="fas fa-external-link-alt ml-2"></i>
-                                </a>` : ''}
+                                <span class="text-gray-500 dark:text-gray-400 text-xs">Updated: ${new Date(repo.updated_at).toLocaleDateString()}</span>
                             </div>
                         </div>
                     `;
                     projectsContainer.insertAdjacentHTML('beforeend', projectCard);
                 });
             } catch (error) {
-                console.error("Failed to fetch GitHub repositories:", error);
-                projectsContainer.innerHTML = `
-                    <div class="col-span-full text-center text-red-600 dark:text-red-400">
-                        <p>Failed to load projects. Please check your internet connection or GitHub username.</p>
-                        <p class="text-sm mt-2">Error: ${error.message}</p>
-                    </div>
-                `;
+                console.error("Failed to fetch GitHub projects:", error);
+                projectsContainer.innerHTML = `<p class="col-span-full text-center text-red-600 dark:text-red-400">Failed to load projects. Please check your internet connection or try again later.</p>`;
             }
         }
 
-        // Call GitHub repo fetch when the page loads
-        document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+        // Certification Carousel
+        const carousel = document.getElementById('certifications-carousel');
+        const prevButton = document.getElementById('carousel-prev');
+        const nextButton = document.getElementById('carousel-next');
 
+        prevButton.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: -350, // Adjust this value based on your card width + gap
+                behavior: 'smooth'
+            });
+        });
+
+        nextButton.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: 350, // Adjust this value based on your card width + gap
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize
+        document.addEventListener("DOMContentLoaded", () => {
+            type();
+            fetchGitHubProjects();
+        });
     </script>
 </body>
 </html>
