@@ -13,44 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Theme persistence: check user's last preference
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        // On page load: auto-detect or load preference
-        (function() {
-            const storedTheme = localStorage.getItem('theme');
-            if (storedTheme) {
-                setTheme(storedTheme);
-            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setTheme('dark');
-            }
-        })();
-
-        // Toggle event handlers
-        document.addEventListener('DOMContentLoaded', function() {
-            const desktopToggle = document.getElementById('theme-toggle-desktop');
-            const mobileToggle = document.getElementById('theme-toggle-mobile');
-            
-            function toggleTheme() {
-                if (document.documentElement.classList.contains('dark')) {
-                    setTheme('light');
-                } else {
-                    setTheme('dark');
-                }
-                // Optionally update icon states here
-            }
-
-            if (desktopToggle) desktopToggle.addEventListener('click', toggleTheme);
-            if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
-        });
-    </script>
+       
 
     <style>
         /* Custom styles for smooth scrolling and font */
