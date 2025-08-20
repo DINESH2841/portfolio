@@ -1,6 +1,6 @@
-# data
-users = []
-config = {}
+# Config
+DEBUG = True
+VERSION = '1.0'
 
-# Modified at 2026-06-06T01:41:26.050794
-# Random value: 2774
+# Modified at 2026-06-06T01:41:27.586533
+# Random value: 5701
