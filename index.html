@@ -52,7 +52,7 @@
                 <a href="#contact" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Contact</a>
             </nav>
             <div class="md:hidden flex items-center space-x-4">
-                <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                     <i class="fas fa-sun"></i>
                 </button>
@@ -60,7 +60,7 @@
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
-            <button id="theme-toggle-desktop" class="hidden md:block p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="theme-toggle-desktop" class="hidden md:block p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
             </button>
@@ -107,8 +107,30 @@
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Education</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Education cards here (unchanged for brevity) -->
-                    ...
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">BE. Electronics and Communication Engineering</h3>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">SIMATS University, Chennai</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022 - 2026</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Focused on embedded systems, digital signal processing, communication networks, and software development. Gained hands-on experience with microcontrollers, circuit design, and programming.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Higher Secondary Certificate</h3>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya Jr College, Tirupati</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Completed higher secondary education with a focus on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Secondary School Certificate</h3>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya School, Tirupati</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2020</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Successfully completed secondary school education, developing a strong academic foundation across core subjects including Mathematics, Science, and English.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -134,14 +156,138 @@
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Skills</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Skills cards here (unchanged for brevity) -->
-                    ...
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <i class="fas fa-code text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Languages</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm">
+                            <li>Python</li>
+                            <li>C/C++</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <i class="fas fa-microchip text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Embedded Systems</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm">
+                            <li>Arduino</li>
+                            <li>Raspberry Pi</li>
+                            <li>ESP32/ESP8266</li>
+                            <li>RTOS</li>
+                            <li>Firmware Dev</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <i class="fas fa-globe text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Web Development</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm">
+                            <li>HTML, CSS, JS</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>React (Basic)</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <i class="fas fa-brain text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">AI/ML</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm">
+                            <li>TensorFlow (Basic)</li>
+                            <li>Keras (Basic)</li>
+                            <li>Scikit-learn</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <i class="fas fa-tools text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tools & Platforms</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm">
+                            <li>Git/GitHub</li>
+                            <li>VS Code</li>
+                            <li>Docker (Basic)</li>
+                            <li>Firebase</li>
+                            <li>AWS IoT (Basic)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-600">
+                        <i class="fas fa-cogs text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Other Skills</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm">
+                            <li>Problem Solving</li>
+                            <li>Debugging</li>
+                            <li>Technical Documentation</li>
+                            <li>Team Collaboration</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications Carousel and Achievements (unchanged for brevity) -->
-        ...
+        <!-- Certifications Carousel -->
+        <section id="certifications" class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Certifications</h2>
+                <div class="relative">
+                    <div id="certifications-carousel" class="flex overflow-x-scroll snap-x snap-mandatory scrollbar-hide space-x-6 pb-4">
+                        <!-- Example cards, add more as needed -->
+                        <div class="flex-shrink-0 w-80 snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
+                            <img src="https://placehold.co/300x200/ADD8E6/000000?text=Oracle+AI" alt="Oracle AI" class="w-full h-40 object-cover rounded-md mb-4 shadow-md">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Oracle Cloud Infrastructure AI Foundations</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Issued by Oracle</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs">Issued: Sep 2024 | Expires: Sep 2026</p>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CAB88AFECDE920D3C82D15E2B788CBFEDE93CD1A72AC9AE160F8E317725E22B9" target="_blank" class="text-blue-500 text-xs underline">Verify</a>
+                        </div>
+                        <!-- Add more certification cards here -->
+                    </div>
+                    <button id="carousel-prev" class="absolute top-1/2 left-0 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="carousel-next" class="absolute top-1/2 right-0 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-16 px-4 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Achievements</h2>
+                <div class="space-y-8">
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
+                        <i class="fas fa-award text-4xl text-green-500 dark:text-green-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Best Poster Award - University Level</h3>
+                            <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">SIMATS University</p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Recognized for the final year project: <strong>"Improving Accuracy During Oral Abnormality Detection with DenseNet201 and AO Compared to MobileNetV3"</strong>. Showcased advancements in medical AI.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
+                        <i class="fas fa-microscope text-4xl text-red-500 dark:text-red-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">National Conference Awardee</h3>
+                            <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">Balaji Medical College</p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Presented a research paper on smart IoT systems at a national-level conference and received recognition for impactful innovation in tech-driven healthcare solutions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
+                        <i class="fas fa-code-branch text-4xl text-indigo-500 dark:text-indigo-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Hackathon & Expo Participation</h3>
+                            <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">Multiple Institutions</p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Actively participated in various inter-college hackathons and tech expos. Built solutions ranging from embedded systems to AI-integrated apps.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="py-16 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -217,7 +363,7 @@
             setTimeout(type, typingSpeed);
         }
 
-        // Theme Toggle (fixed, with icon updates)
+        // Theme Toggle (with icon updates)
         const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
         const themeToggleMobile = document.getElementById("theme-toggle-mobile");
         const htmlElement = document.documentElement;
@@ -361,6 +507,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             type();
             fetchGitHubProjects();
+            setTheme(htmlElement.classList.contains("dark"));
         });
     </script>
 </body>
