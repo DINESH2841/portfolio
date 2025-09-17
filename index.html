@@ -13,16 +13,17 @@
   <style>
     html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
     body { background-color: #f9fafb; color: #111827; transition: all 0.3s; }
+    body.dark { background-color: #111827; color: #f9fafb; }
     /* scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 9999px; }
   </style>
 </head>
-<body>
+<body class="transition-colors duration-300">
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white shadow-md">
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
-      <a href="#about" class="text-2xl font-bold text-blue-600">S. Dinesh</a>
+      <a href="#about" class="text-2xl font-bold text-blue-600 dark:text-blue-400">S. Dinesh</a>
       <nav class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-500">About</a>
         <a href="#education" class="hover:text-blue-500">Education</a>
@@ -33,38 +34,42 @@
         <a href="#achievements" class="hover:text-blue-500">Achievements</a>
         <a href="#contact" class="hover:text-blue-500">Contact</a>
       </nav>
+      <!-- Theme toggle -->
+      <button id="themeToggle" class="ml-6 text-gray-600 dark:text-gray-300">
+        <i class="fas fa-moon text-xl"></i>
+      </button>
     </div>
   </header>
 
   <!-- About -->
-  <section id="about" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-100 px-4">
+  <section id="about" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 px-4">
     <div class="text-center max-w-3xl">
       <img src="https://placehold.co/150x150/ADD8E6/000000?text=SD" class="w-36 h-36 rounded-full mx-auto mb-6 shadow-lg border-4 border-white" />
-      <h1 class="text-4xl font-extrabold">Hi, I’m <span class="text-blue-600">S. Dinesh</span></h1>
-      <p class="text-xl mt-4 text-gray-600">Software Engineer | Full Stack Developer | AI & IoT Enthusiast</p>
-      <p class="mt-6 text-gray-600">Passionate about building scalable web apps, IoT systems, and AI-powered solutions using React, Next.js, TypeScript, MSSQL, and Azure.</p>
+      <h1 class="text-4xl font-extrabold">Hi, I’m <span class="text-blue-600 dark:text-blue-400">S. Dinesh</span></h1>
+      <p class="text-xl mt-4 text-gray-600 dark:text-gray-300">Software Engineer | Full Stack Developer | AI & IoT Enthusiast</p>
+      <p class="mt-6 text-gray-600 dark:text-gray-400">Passionate about building scalable web apps, IoT systems, and AI-powered solutions using React, Next.js, TypeScript, MSSQL, and Azure.</p>
       <div class="mt-8 space-x-4">
         <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md">Get in Touch</a>
-        <a href="Sevenni%20Dinesh%20Resume.pdf" download class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg shadow-md">Download Resume</a>
+        <a href="Sevenni%20Dinesh%20Resume.pdf" download class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-6 py-3 rounded-lg shadow-md">Download Resume</a>
       </div>
     </div>
   </section>
 
   <!-- Education -->
-  <section id="education" class="py-16 bg-gray-100 px-4">
+  <section id="education" class="py-16 bg-gray-100 dark:bg-gray-800 px-4">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-bold text-xl text-blue-600">BE. ECE</h3>
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+          <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">BE. ECE</h3>
           <p>SIMATS University, Chennai (2022–2026)</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-bold text-xl text-blue-600">Higher Secondary</h3>
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+          <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">Higher Secondary</h3>
           <p>Sri Chaitanya Jr College, Tirupati (2022)</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-bold text-xl text-blue-600">SSC</h3>
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+          <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">SSC</h3>
           <p>Sri Chaitanya School, Tirupati (2020)</p>
         </div>
       </div>
@@ -75,11 +80,11 @@
   <section id="internship" class="py-16 px-4">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12">Internship</h2>
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold text-blue-600">Hitachi Energy</h3>
-        <p class="italic text-gray-600">Aug 2025 – Nov 2025</p>
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">Hitachi Energy</h3>
+        <p class="italic text-gray-600 dark:text-gray-400">Aug 2025 – Nov 2025</p>
         <h4 class="mt-2 font-bold">Project: Travel Request Management System</h4>
-        <p class="mt-4 text-gray-700">
+        <p class="mt-4 text-gray-700 dark:text-gray-300">
           Developed a Travel Request Management System using <strong>Next.js</strong> (frontend), 
           <strong>Express.js</strong> (backend), and <strong>MSSQL</strong> (database) integrated with 
           Microsoft SSO for auto-login via company email ID. Designed role-based workflows where 
@@ -89,39 +94,38 @@
           separate databases for saved and submitted data. Automated email notifications: submission mails 
           sent to managers (To) with employees in CC, including request info and approval links; approval 
           triggered confirmation mails to employees (To) and managers (CC). Built a Manager Dashboard for 
-          tracking all requests with statuses (Pending, Approved, Rejected). Gained practical exposure in 
-          enterprise full-stack development, database integration, and workflow automation.
+          tracking all requests with statuses (Pending, Approved, Rejected).
         </p>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-16 px-4 bg-gray-50">
+  <section id="skills" class="py-16 px-4 bg-gray-50 dark:bg-gray-700">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
           <h3 class="font-semibold text-lg mb-2">Programming Languages</h3>
           <p>Python, C/C++, Java, JavaScript, TypeScript, SQL</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
           <h3 class="font-semibold text-lg mb-2">Web Development</h3>
           <p>HTML, CSS, React.js, Next.js, Node.js, Express.js</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
           <h3 class="font-semibold text-lg mb-2">Databases & Cloud</h3>
           <p>MongoDB, MSSQL, Firebase, Azure, AWS IoT (Basic)</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
           <h3 class="font-semibold text-lg mb-2">Embedded & IoT</h3>
           <p>Arduino, ESP32, Raspberry Pi, RTOS</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
           <h3 class="font-semibold text-lg mb-2">AI/ML</h3>
           <p>TensorFlow, Keras, Scikit-learn, Data Analysis</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
           <h3 class="font-semibold text-lg mb-2">Tools & Others</h3>
           <p>Git/GitHub, VS Code, Docker (Basic), Team Collaboration</p>
         </div>
@@ -130,12 +134,12 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-100 px-4">
+  <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Contact</h2>
       <p class="mb-4">Feel free to reach out for collaborations or opportunities!</p>
-      <p>Email: <a href="mailto:sevenniidinesh@gmail.com" class="text-blue-600">sevenniidinesh@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919000954915" class="text-blue-600">+91 9000954915</a></p>
+      <p>Email: <a href="mailto:sevenniidinesh@gmail.com" class="text-blue-600 dark:text-blue-400">sevenniidinesh@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919000954915" class="text-blue-600 dark:text-blue-400">+91 9000954915</a></p>
       <div class="flex justify-center space-x-6 mt-6">
         <a href="https://github.com/" target="_blank"><i class="fab fa-github text-2xl"></i></a>
         <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin text-2xl"></i></a>
@@ -143,158 +147,19 @@
     </div>
   </section>
 
-  <footer class="py-6 text-center bg-gray-200 text-gray-600">
+  <footer class="py-6 text-center bg-gray-200 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
     <p>© 2025 S. Dinesh. All Rights Reserved.</p>
   </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <title>S. Dinesh | Software Engineer & Full Stack Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="S. Dinesh - Software Engineer Portfolio. Showcasing projects in AI, IoT, Full-Stack Development, skills, and achievements." />
-  <meta name="keywords" content="S. Dinesh, Software Engineer, AI, IoT, Full-Stack, React, Next.js, TypeScript, MSSQL, Azure" />
-  <meta name="author" content="S. Dinesh" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
-    body { background-color: #f9fafb; color: #111827; transition: all 0.3s; }
-    /* scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 9999px; }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
-      <a href="#about" class="text-2xl font-bold text-blue-600">S. Dinesh</a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="#about" class="hover:text-blue-500">About</a>
-        <a href="#education" class="hover:text-blue-500">Education</a>
-        <a href="#internship" class="hover:text-blue-500">Internship</a>
-        <a href="#projects" class="hover:text-blue-500">Projects</a>
-        <a href="#skills" class="hover:text-blue-500">Skills</a>
-        <a href="#certifications" class="hover:text-blue-500">Certifications</a>
-        <a href="#achievements" class="hover:text-blue-500">Achievements</a>
-        <a href="#contact" class="hover:text-blue-500">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- About -->
-  <section id="about" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-100 px-4">
-    <div class="text-center max-w-3xl">
-      <img src="https://placehold.co/150x150/ADD8E6/000000?text=SD" class="w-36 h-36 rounded-full mx-auto mb-6 shadow-lg border-4 border-white" />
-      <h1 class="text-4xl font-extrabold">Hi, I’m <span class="text-blue-600">S. Dinesh</span></h1>
-      <p class="text-xl mt-4 text-gray-600">Software Engineer | Full Stack Developer | AI & IoT Enthusiast</p>
-      <p class="mt-6 text-gray-600">Passionate about building scalable web apps, IoT systems, and AI-powered solutions using React, Next.js, TypeScript, MSSQL, and Azure.</p>
-      <div class="mt-8 space-x-4">
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md">Get in Touch</a>
-        <a href="Sevenni%20Dinesh%20Resume.pdf" download class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg shadow-md">Download Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="py-16 bg-gray-100 px-4">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-bold text-xl text-blue-600">BE. ECE</h3>
-          <p>SIMATS University, Chennai (2022–2026)</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-bold text-xl text-blue-600">Higher Secondary</h3>
-          <p>Sri Chaitanya Jr College, Tirupati (2022)</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-bold text-xl text-blue-600">SSC</h3>
-          <p>Sri Chaitanya School, Tirupati (2020)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Internship -->
-  <section id="internship" class="py-16 px-4">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">Internship</h2>
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold text-blue-600">Hitachi Energy</h3>
-        <p class="italic text-gray-600">Aug 2025 – Nov 2025</p>
-        <h4 class="mt-2 font-bold">Project: Travel Request Management System</h4>
-        <p class="mt-4 text-gray-700">
-          Developed a Travel Request Management System using <strong>Next.js</strong> (frontend), 
-          <strong>Express.js</strong> (backend), and <strong>MSSQL</strong> (database) integrated with 
-          Microsoft SSO for auto-login via company email ID. Designed role-based workflows where 
-          employee details (Name, Mail, Employee ID, Job Position, Managers) were auto-fetched from MSSQL, 
-          with options to add unlimited employees per request, save drafts, and submit final requests. 
-          Implemented a travel details module with dropdowns (purpose, dates, description) and maintained 
-          separate databases for saved and submitted data. Automated email notifications: submission mails 
-          sent to managers (To) with employees in CC, including request info and approval links; approval 
-          triggered confirmation mails to employees (To) and managers (CC). Built a Manager Dashboard for 
-          tracking all requests with statuses (Pending, Approved, Rejected). Gained practical exposure in 
-          enterprise full-stack development, database integration, and workflow automation.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="py-16 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-lg mb-2">Programming Languages</h3>
-          <p>Python, C/C++, Java, JavaScript, TypeScript, SQL</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-lg mb-2">Web Development</h3>
-          <p>HTML, CSS, React.js, Next.js, Node.js, Express.js</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-lg mb-2">Databases & Cloud</h3>
-          <p>MongoDB, MSSQL, Firebase, Azure, AWS IoT (Basic)</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-lg mb-2">Embedded & IoT</h3>
-          <p>Arduino, ESP32, Raspberry Pi, RTOS</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-lg mb-2">AI/ML</h3>
-          <p>TensorFlow, Keras, Scikit-learn, Data Analysis</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-lg mb-2">Tools & Others</h3>
-          <p>Git/GitHub, VS Code, Docker (Basic), Team Collaboration</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-100 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
-      <p class="mb-4">Feel free to reach out for collaborations or opportunities!</p>
-      <p>Email: <a href="mailto:sevenniidinesh@gmail.com" class="text-blue-600">sevennidinesh@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919000954915" class="text-blue-600">+91 9000954915</a></p>
-      <div class="flex justify-center space-x-6 mt-6">
-        <a href="https://github.com/DINESH2841" target="_blank"><i class="fab fa-github text-2xl"></i></a>
-        <a href="https://www.linkedin.com/in/sevinnidinesh" target="_blank"><i class="fab fa-linkedin text-2xl"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-6 text-center bg-gray-200 text-gray-600">
-    <p>© 2025 S. Dinesh. All Rights Reserved.</p>
-  </footer>
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById("themeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleBtn.innerHTML = document.body.classList.contains("dark") 
+        ? '<i class="fas fa-sun text-xl"></i>' 
+        : '<i class="fas fa-moon text-xl"></i>';
+    });
+  </script>
 </body>
 </html>
