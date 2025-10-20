@@ -1,6 +1,6 @@
-# data
-users = []
-config = {}
+# changelog
+## v1.0
+- Initial release
 
-# Modified at 2026-06-06T01:41:27.682896
-# Random value: 4787
+# Modified at 2026-06-06T01:41:28.619867
+# Random value: 762
