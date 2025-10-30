@@ -1,6 +1,6 @@
-# data
-users = []
-config = {}
+# .gitignore
+__pycache__/
+*.pyc
 
-# Modified at 2026-06-06T01:41:28.525732
-# Random value: 1741
+# Modified at 2026-06-06T01:41:28.835088
+# Random value: 2667
