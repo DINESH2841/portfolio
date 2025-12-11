@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>S. Dinesh | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="S. Dinesh - Resume & Download">
+  <meta name="keywords" content="S. Dinesh, Resume, CV, Download">
+  <meta name="author" content="S. Dinesh">
+  <meta property="og:title" content="S. Dinesh | Resume" />
+  <meta property="og:description" content="Download my resume" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dinesh2841.github.io/resume/" />
+  <meta property="og:image" content="https://dinesh2841.github.io/assets/images/profile.webp" />
+  <meta name="robots" content="index, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script>
+    (function applyInitialTheme() {
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      root.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --text-light: #334155;
+      --border: #e5e7eb;
+      --button-bg: #1e40af;
+      --button-text: #ffffff;
+    }
+
+    /* Dark mode */
+    html[data-theme="dark"] {
+      --bg: #0b1220;
+      --text: #e5e7eb;
+      --text-light: #94a3b8;
+      --border: #1e293b;
+      --button-bg: #3b82f6;
+      --button-text: #ffffff;
+    }
+
+    /* Pure Black */
+    html[data-theme="black"] {
+      --bg: #000000;
+      --text: #ffffff;
+      --text-light: #d1d5db;
+      --border: #222222;
+      --button-bg: #2563eb;
+      --button-text: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    button, .btn {
+      background: var(--button-bg) !important;
+      color: var(--button-text) !important;
+      border-color: var(--border) !important;
+    }
+
+    p, li {
+      color: var(--text-light);
+    }
+
+    a {
+      color: var(--button-bg);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text);
+    }
+
+    body, header, section, footer, main, button {
+      transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: var(--border);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--button-bg);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--button-bg);
+      opacity: 0.8;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.25em;
+      background-color: currentColor;
+      margin-left: 2px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    /* Border colors */
+    .border {
+      border-color: var(--border) !important;
+    }
+
+    /* Input styling */
+    input, textarea {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      border-color: var(--border) !important;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: var(--text-light);
+      opacity: 0.7;
+    }
+
+    /* Focus states */
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--button-bg);
+    }
+
+    /* Label colors */
+    label {
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body style="background: var(--bg); color: var(--text);">
+  <header class="sticky top-0 z-50 border-b py-3 transition-colors duration-300" style="background: var(--bg); border-color: var(--border);">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold tracking-tight" style="color: var(--text);">S. Dinesh</a>
+      <span class="text-sm font-semibold" style="color: var(--button-bg);">Resume</span>
+      
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition" style="background: var(--button-bg); border-color: var(--border);">
+          <span id="icon-light" aria-hidden="true" style="display:inline; font-size:1.25rem;">☀️</span>
+          <span id="icon-dark" aria-hidden="true" style="display:none; font-size:1.25rem;">🌙</span>
+          <span id="icon-black" aria-hidden="true" style="display:none; font-size:1.25rem;">⚫</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-32 space-y-32">
+    <section class="min-h-screen flex flex-col items-center justify-center px-4 transition-colors duration-300" style="background: var(--bg);">
+      <div class="max-w-3xl mx-auto text-center">
+        <img src="../assets/images/profile.webp" alt="S. Dinesh" class="w-40 h-40 rounded-full mx-auto mb-8 shadow ring-1 object-cover" style="outline-color: var(--border);" loading="lazy" decoding="async" />
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3" style="color: var(--text);">
+          S. Dinesh
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto" style="color: var(--text-light);">
+          Software Engineer • Full-Stack Developer • IoT Enthusiast
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="p-6 rounded-lg border" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-map-marker-alt text-2xl mb-3" style="color: var(--button-bg);"></i>
+            <p style="color: var(--text-light);">Chennai, India</p>
+          </div>
+          <div class="p-6 rounded-lg border" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-envelope text-2xl mb-3" style="color: var(--button-bg);"></i>
+            <a href="mailto:sevennidinesh@gmail.com" style="color: var(--button-bg);" class="hover:underline">sevennidinesh@gmail.com</a>
+          </div>
+          <div class="p-6 rounded-lg border" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-phone text-2xl mb-3" style="color: var(--button-bg);"></i>
+            <p style="color: var(--text-light);">+91 XXXX XXX XXX</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--text);">Resume Downloads</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- General Resume -->
+            <a href="../Sevenni Dinesh Resume.pdf" download aria-label="Download general resume" class="group border-2 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1" style="background: var(--bg); border-color: var(--button-bg);">
+              <i class="fas fa-file-pdf text-4xl mb-3" style="color: var(--button-bg);"></i>
+              <h3 class="text-xl font-bold mb-2" style="color: var(--text);">General Resume</h3>
+              <p style="color: var(--text-light);" class="text-sm mb-4">
+                Complete resume with all experience, projects, and skills
+              </p>
+              <button class="inline-flex items-center gap-2 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 transition" style="background: var(--button-bg); color: var(--button-text);">
+                <i class="fas fa-download"></i>Download
+              </button>
+            </a>
+
+            <!-- Role-Specific Info -->
+            <div class="group border-2 rounded-lg p-6 shadow-md" style="background: var(--bg); border-color: var(--border);">
+              <i class="fas fa-briefcase text-4xl mb-3" style="color: var(--button-bg);"></i>
+              <h3 class="text-xl font-bold mb-2" style="color: var(--text);">Role-Specific Portfolios</h3>
+              <p style="color: var(--text-light);" class="text-sm mb-4">
+                Tailored portfolios by specialization for targeted applications
+              </p>
+              <div class="flex flex-col gap-2">
+                <a href="/sde/" class="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md transition" style="background: var(--border); color: var(--button-bg);">
+                  <i class="fas fa-code"></i>SDE Portfolio
+                </a>
+                <a href="/full-stack/" class="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md transition" style="background: var(--border); color: var(--button-bg);">
+                  <i class="fas fa-layer-group"></i>Full-Stack Portfolio
+                </a>
+                <a href="/iot/" class="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md transition" style="background: var(--border); color: var(--button-bg);">
+                  <i class="fas fa-microchip"></i>IoT Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-lg p-8 border" style="background: var(--border); border-color: var(--border);">
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--text);">Quick Links</h2>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fab fa-linkedin"></i>LinkedIn
+            </a>
+            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fab fa-github"></i>GitHub
+            </a>
+            <a href="mailto:sevennidinesh@gmail.com" aria-label="Email" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fas fa-envelope"></i>Email
+            </a>
+            <a href="/" aria-label="Back to Portfolio" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fas fa-arrow-left"></i>Back to Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: var(--bg); border-color: var(--border);" class="py-8 text-center border-t">
+    <div class="container mx-auto px-4">
+      <p class="text-sm" style="color: var(--text-light);">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
+      <p style="color: var(--text-light);">&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themes = ["light", "dark", "black"];
+    let current = localStorage.getItem("theme") || "light";
+
+    function applyTheme(t) {
+      document.documentElement.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+
+      document.getElementById("icon-light").style.display = t === "light" ? "inline" : "none";
+      document.getElementById("icon-dark").style.display = t === "dark" ? "inline" : "none";
+      document.getElementById("icon-black").style.display = t === "black" ? "inline" : "none";
+    }
+
+    applyTheme(current);
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      let index = themes.indexOf(current);
+      current = themes[(index + 1) % themes.length];
+      applyTheme(current);
+    });
+
+    (function setupFooterYear() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

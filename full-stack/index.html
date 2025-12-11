@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>S. Dinesh | Full-Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="S. Dinesh - Full-Stack Developer Portfolio. React, Next.js, Node.js, responsive web design.">
+  <meta name="keywords" content="S. Dinesh, Full-Stack Developer, React, Next.js, Node.js, Portfolio, Web Development">
+  <meta name="author" content="S. Dinesh">
+  <meta property="og:title" content="S. Dinesh | Full-Stack Developer" />
+  <meta property="og:description" content="Full-stack web developer building modern, responsive applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dinesh2841.github.io/full-stack/" />
+  <meta property="og:image" content="https://dinesh2841.github.io/assets/images/profile.webp" />
+  <meta name="robots" content="index, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script>
+    (function applyInitialTheme() {
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      root.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --text-light: #334155;
+      --border: #e5e7eb;
+      --button-bg: #1e40af;
+      --button-text: #ffffff;
+    }
+
+    /* Dark mode */
+    html[data-theme="dark"] {
+      --bg: #0b1220;
+      --text: #e5e7eb;
+      --text-light: #94a3b8;
+      --border: #1e293b;
+      --button-bg: #3b82f6;
+      --button-text: #ffffff;
+    }
+
+    /* Pure Black */
+    html[data-theme="black"] {
+      --bg: #000000;
+      --text: #ffffff;
+      --text-light: #d1d5db;
+      --border: #222222;
+      --button-bg: #2563eb;
+      --button-text: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    button, .btn {
+      background: var(--button-bg) !important;
+      color: var(--button-text) !important;
+      border-color: var(--border) !important;
+    }
+
+    p, li {
+      color: var(--text-light);
+    }
+
+    a {
+      color: var(--button-bg);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text);
+    }
+
+    body, header, section, footer, main, button {
+      transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: var(--border);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--button-bg);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--button-bg);
+      opacity: 0.8;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.25em;
+      background-color: currentColor;
+      margin-left: 2px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    /* Border colors */
+    .border {
+      border-color: var(--border) !important;
+    }
+
+    /* Input styling */
+    input, textarea {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      border-color: var(--border) !important;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: var(--text-light);
+      opacity: 0.7;
+    }
+
+    /* Focus states */
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--button-bg);
+    }
+
+    /* Label colors */
+    label {
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body style="background: var(--bg); color: var(--text);">
+  <header class="sticky top-0 z-50 border-b py-3 transition-colors duration-300" style="background: var(--bg); border-color: var(--border);">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold tracking-tight" style="color: var(--text);">S. Dinesh</a>
+      <span class="text-sm font-semibold" style="color: var(--button-bg);">Full-Stack</span>
+      
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition" style="background: var(--button-bg); border-color: var(--border);">
+          <span id="icon-light" style="display:inline; font-size:1.25rem;" aria-hidden="true">☀️</span>
+          <span id="icon-dark" style="display:none; font-size:1.25rem;" aria-hidden="true">🌙</span>
+          <span id="icon-black" style="display:none; font-size:1.25rem;" aria-hidden="true">⚫</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-32 space-y-32">
+    <section id="about" class="min-h-screen flex flex-col items-center justify-center px-4 transition-colors duration-300" style="background: var(--bg);">
+      <div class="max-w-3xl mx-auto text-center">
+        <img src="../assets/images/profile.webp" alt="S. Dinesh" class="w-40 h-40 rounded-full mx-auto mb-8 shadow ring-1 object-cover" style="outline-color: var(--border);" loading="lazy" decoding="async" />
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3" style="color: var(--text);">
+          Hi, I'm <span style="color: var(--button-bg);">S. Dinesh</span>
+        </h1>
+        <p class="text-lg md:text-xl mb-4 leading-tight" style="color: var(--text-light);">
+          A <span id="typing-effect" class="font-semibold" style="color: var(--button-bg);"></span><span class="cursor" style="color: var(--button-bg);"></span>
+        </p>
+        <p class="max-w-2xl mx-auto mb-4" style="color: var(--text-light);">
+          Full-stack engineer creating seamless user experiences backed by robust systems. I specialize in React, Next.js, and Node.js.
+        </p>
+        <div class="mt-6" style="color: var(--text-light);">
+          <span class="inline-block px-3 py-1 rounded-full text-sm" style="background: var(--border); color: var(--text-light);">Seeking full-time & internship opportunities</span>
+        </div>
+        
+        <div class="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-3">
+          <a href="#contact" aria-label="Get in touch - scroll to contact form" class="inline-flex items-center justify-center font-semibold py-3 px-8 rounded-md shadow-sm transition-colors duration-200" style="background: var(--button-bg); color: var(--button-text);">
+            Get in Touch
+          </a>
+          <a href="../Sevenni Dinesh Resume.pdf" download aria-label="Download resume PDF" class="inline-flex items-center justify-center font-semibold py-3 px-8 rounded-md shadow-sm transition-colors duration-200" style="background: var(--border); color: var(--text-light);">
+            Download Resume <i class="fas fa-download ml-2"></i>
+          </a>
+        </div>
+        
+        <div class="mt-8 flex flex-wrap justify-center gap-3" style="color: var(--text-light);">
+          <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors duration-200" style="background: var(--border); color: var(--text-light);">
+            <i class="fab fa-linkedin"></i>LinkedIn
+          </a>
+          <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors duration-200" style="background: var(--border); color: var(--text-light);">
+            <i class="fab fa-github"></i>GitHub
+          </a>
+          <a href="mailto:sevennidinesh@gmail.com" aria-label="Send email" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors duration-200" style="background: var(--border); color: var(--text-light);">
+            <i class="fas fa-envelope"></i>Email
+          </a>
+        </div>
+        
+        <ul class="mt-8 space-y-2 max-w-2xl mx-auto" style="color: var(--text-light);">
+          <li>• Modern SPA with React + TypeScript for responsive UIs</li>
+          <li>• Full-stack with Next.js, Express.js, PostgreSQL, MongoDB</li>
+          <li>• Production-ready: authentication, state management, testing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="featured" class="px-4 transition-colors duration-300" style="background: var(--bg);">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-6 rounded-lg shadow-xl border" style="background: var(--bg); border-color: var(--border);">
+            <h3 class="text-2xl font-semibold" style="color: var(--text);">Travel Request Portal</h3>
+            <p class="text-sm mb-2" style="color: var(--text-light);">Next.js • React • Tailwind CSS • TypeScript</p>
+            <p style="color: var(--text-light);">
+              Enterprise web portal with interactive forms, real-time status updates, responsive design for mobile and desktop. Microsoft SSO integration.
+            </p>
+            <div class="mt-4 flex gap-4">
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View Travel Request Portal on GitHub (opens in new tab)" style="color: var(--button-bg);" class="underline">GitHub</a>
+            </div>
+          </div>
+          <div class="p-6 rounded-lg shadow-xl border" style="background: var(--bg); border-color: var(--border);">
+            <h3 class="text-2xl font-semibold" style="color: var(--text);">E-Commerce Dashboard</h3>
+            <p class="text-sm mb-2" style="color: var(--text-light);">React • Redux • REST API • Chart.js</p>
+            <p style="color: var(--text-light);">
+              Analytics dashboard with dynamic charts, real-time data, order tracking, and user management. Fully responsive and accessible.
+            </p>
+            <div class="mt-4 flex gap-4">
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View E-Commerce Dashboard on GitHub (opens in new tab)" style="color: var(--button-bg);" class="underline">GitHub</a>
+            </div>
+          </div>
+          <div class="p-6 rounded-lg shadow-xl border" style="background: var(--bg); border-color: var(--border);">
+            <h3 class="text-2xl font-semibold" style="color: var(--text);">Blog Application</h3>
+            <p class="text-sm mb-2" style="color: var(--text-light);">Next.js • Markdown • GitHub API</p>
+            <p style="color: var(--text-light);">
+              Markdown-based blog with search, filtering, categories, and dark mode. SEO optimized with dynamic sitemap generation.
+            </p>
+            <div class="mt-4 flex gap-4">
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View Blog Application on GitHub (opens in new tab)" style="color: var(--button-bg);" class="underline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="px-4 transition-colors duration-300" style="background: var(--bg);">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-react text-3xl mb-3" style="color: var(--button-bg);"></i>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">React/Next.js</h3>
+            <p class="text-sm" style="color: var(--text-light);">React Hooks, Next.js SSR, State Management</p>
+          </div>
+          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-server text-3xl mb-3" style="color: var(--button-bg);"></i>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Backend</h3>
+            <p class="text-sm" style="color: var(--text-light);">Node.js, Express, REST APIs</p>
+          </div>
+          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-palette text-3xl mb-3" style="color: var(--button-bg);"></i>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Styling</h3>
+            <p class="text-sm" style="color: var(--text-light);">Tailwind CSS, CSS Modules, Responsive</p>
+          </div>
+          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-database text-3xl mb-3" style="color: var(--button-bg);"></i>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Databases</h3>
+            <p class="text-sm" style="color: var(--text-light);">PostgreSQL, MongoDB, Firebase</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="px-4 transition-colors duration-300" style="background: var(--bg);">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Certifications & Licenses</h2>
+        <div class="space-y-8">
+          <div data-section>
+            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
+              <i class="fas fa-brain text-3xl mr-3"></i> AI/ML & Cloud
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Artificial Intelligence: Concepts and Techniques</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Nov 2025</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL25CS159S127070087410468544</p>
+                <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs159/Course/NPTEL25CS159S127070087410468544.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">Oracle • Issued Sep 2024 (Expires Sep 2026)</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: dT212591RD92b</p>
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CAB88AFECDE920D3C82D15E2B788CBFEDE93CD1A72AC9AE160F8E317725E22B9" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+            </div>
+          </div>
+          <div data-section>
+            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
+              <i class="fas fa-rocket text-3xl mr-3"></i> Hackathons & Challenges
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde,iot" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Google Developer Groups Solution Challenge</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">Google Developer Groups On Campus • Issued Aug 2025</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: 2025H2S01GSC-P20297 • Skills: Firebase</p>
+                <a href="#" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+            </div>
+          </div>
+          <div data-section>
+            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
+              <i class="fas fa-server text-3xl mr-3"></i> Backend & Java
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Java for Beginners</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">Udemy • Issued Jun 2025</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: UC-f0482cb6-c7cf-4b21-b63e-114e9ebbc7ef • Skills: Java</p>
+                <a href="https://www.udemy.com/certificate/UC-f0482cb6-c7cf-4b21-b63e-114e9ebbc7ef/" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Programming in Java</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Oct 2024</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL24CS105S550801830 • Skills: Java</p>
+                <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs105/Course/NPTEL24CS105S55080183004004004.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+            </div>
+          </div>
+          <div data-section>
+            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
+              <i class="fas fa-microchip text-3xl mr-3"></i> IoT & Embedded Systems
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="iot" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Internet of Things</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued May 2025</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL25CS44S44850127604354562 • Skills: IoT</p>
+                <a href="https://internalapp.nptel.ac.in/NOC/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S44850127604354562.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+            </div>
+          </div>
+          <div data-section>
+            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
+              <i class="fas fa-palette text-3xl mr-3"></i> Web & Frontend
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Build Your First Interactive Quiz Game with HTML & CSS</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">SkillEcted • Issued Nov 2024</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: QORVIMP1 • Skills: HTML, CSS</p>
+                <a href="https://skillected.graphy.com/share-certificate?serialno=QORVIMP1" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Front End Development - HTML</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">Great Learning • Issued Sep 2024</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: JCVTZKKT • Skills: HTML</p>
+                <a href="https://www.mygreatlearning.com/certificate/JCVTZKKT" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+            </div>
+          </div>
+          <div data-section>
+            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
+              <i class="fas fa-python text-3xl mr-3"></i> Python & Foundations
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Python for Data Science</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Apr 2024</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL24CS54S654100503 • Skills: Python</p>
+                <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs54/Course/NPTEL24CS54S65410050330066931.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Python Fundamentals for Beginners</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">Great Learning • Issued Aug 2024</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: UCGVIONM • Skills: Python</p>
+                <a href="https://www.mygreatlearning.com/certificate/UCGVIONM" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">The Joy of Computing Using Python</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Apr 2023</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL23CS20S23343702 • Skills: Python</p>
+                <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs20/Course/NPTEL23CS20S2334370204107181.jpg" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Python for Non-Programmers</h4>
+                <p class="text-sm mb-2" style="color: var(--text-light);">Great Learning • Issued Oct 2023</p>
+                <p class="text-xs mb-3" style="color: var(--text-light);">ID: YKGYZBIT • Skills: Python</p>
+                <a href="https://www.mygreatlearning.com/certificate/YKGYZBIT" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="px-4 transition-colors duration-300" style="background: var(--bg);">
+      <div class="max-w-lg mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Contact</h2>
+        <div class="p-8 rounded-lg shadow-xl border" style="background: var(--bg); border-color: var(--border);">
+          <p class="text-center mb-6" style="color: var(--text-light);">
+            Let's discuss your next project or collaboration opportunity.
+          </p>
+          <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-6 text-left">
+            <div>
+              <label for="name" style="color: var(--text);" class="block text-sm font-semibold mb-2">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your full name" style="background: var(--bg); color: var(--text); border-color: var(--border);" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2" />
+            </div>
+            <div>
+              <label for="email" style="color: var(--text);" class="block text-sm font-semibold mb-2">Email</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-label="Your email address" style="background: var(--bg); color: var(--text); border-color: var(--border);" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2" />
+            </div>
+            <div>
+              <label for="message" style="color: var(--text);" class="block text-sm font-semibold mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required aria-label="Your message" style="background: var(--bg); color: var(--text); border-color: var(--border);" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2"></textarea>
+            </div>
+            <button type="submit" class="w-full font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200 focus:outline-none focus:ring-2" aria-label="Send message to S. Dinesh" style="background: var(--button-bg); color: var(--button-text);">
+              Send Message <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 text-center border-t" style="background: var(--bg); border-color: var(--border);">
+    <div class="container mx-auto px-4">
+      <p class="text-sm" style="color: var(--text-light);">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
+      <p style="color: var(--text-light);">© <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themes = ["light", "dark", "black"];
+    let current = localStorage.getItem("theme") || "light";
+
+    function applyTheme(t) {
+      document.documentElement.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+
+      document.getElementById("icon-light").style.display = t === "light" ? "inline" : "none";
+      document.getElementById("icon-dark").style.display = t === "dark" ? "inline" : "none";
+      document.getElementById("icon-black").style.display = t === "black" ? "inline" : "none";
+    }
+
+    applyTheme(current);
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      let index = themes.indexOf(current);
+      current = themes[(index + 1) % themes.length];
+      applyTheme(current);
+    });
+
+    // Populate Footer Year
+    (function setupFooterYear() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+
+    // Typing Effect
+    (function setupTypingEffect() {
+      const typingElement = document.getElementById('typing-effect');
+      const roles = ['Full-Stack Developer', 'React Specialist', 'UI/UX Engineer'];
+
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingSpeed = 100;
+      const deletingSpeed = 50;
+      const pauseBetweenRoles = 2000;
+
+      function type() {
+        const currentRole = roles[roleIndex];
+        
+        if (!isDeleting) {
+          if (charIndex < currentRole.length) {
+            typingElement.textContent += currentRole.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingSpeed);
+          } else {
+            isDeleting = true;
+            setTimeout(type, pauseBetweenRoles);
+          }
+        } else {
+          if (charIndex > 0) {
+            typingElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(type, deletingSpeed);
+          } else {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(type, 500);
+          }
+        }
+      }
+
+      type();
+    })();
+  </script>
+</body>
+</html>
