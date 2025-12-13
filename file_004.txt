@@ -1,6 +1,6 @@
-# .gitignore
-__pycache__/
-*.pyc
+# requirements
+flask>=2.0
+requests>=2.28
 
-# Modified at 2026-06-06T01:41:29.547060
-# Random value: 8099
+# Modified at 2026-06-06T01:41:29.757530
+# Random value: 5253
