@@ -1,6 +1,6 @@
 (function () {
   const THEMES = ["light", "dark", "black"];
-  let currentTheme = localStorage.getItem("theme") || "light";
+  let currentTheme = localStorage.getItem("theme") || "dark";
 
   const root = document.documentElement;
   const body = document.body;
@@ -96,6 +96,31 @@
 
       updateActive();
       window.addEventListener("scroll", updateActive, { passive: true });
+    }
+
+    const filterButtons = Array.from(document.querySelectorAll("[data-filter-btn]"));
+    const projectCards = Array.from(document.querySelectorAll("[data-project-category]"));
+
+    if (filterButtons.length && projectCards.length) {
+      const applyFilter = (filter) => {
+        projectCards.forEach((card) => {
+          const categories = (card.dataset.projectCategory || "").toLowerCase();
+          const isMatch = filter === "all" || categories.includes(filter);
+          card.classList.toggle("hidden", !isMatch);
+        });
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter || "all";
+          filterButtons.forEach((btn) => btn.classList.remove("filter-active"));
+          button.classList.add("filter-active");
+          applyFilter(filter);
+        });
+      });
+
+      filterButtons[0].classList.add("filter-active");
+      applyFilter(filterButtons[0].dataset.filter || "all");
     }
 
     const currentYearTargets = document.querySelectorAll("#current-year, #year");

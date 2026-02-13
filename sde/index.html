@@ -20,14 +20,14 @@
   <link rel="stylesheet" href="../assets/styles.css">
   <script>
     (function applyInitialTheme() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
+      const savedTheme = localStorage.getItem('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
   <script defer src="../assets/theme.js"></script>
 </head>
 
-<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="dark">
   <header class="site-header">
     <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3">
@@ -35,12 +35,12 @@
         <span class="text-sm font-semibold text-[var(--button-bg)]">SDE</span>
       </div>
       <nav class="nav-links" aria-label="Section navigation">
-        <a href="#about" class="nav-link" data-nav-link>About</a>
-        <a href="#internship" class="nav-link" data-nav-link>Experience</a>
-        <a href="#featured" class="nav-link" data-nav-link>Projects</a>
+        <a href="#home" class="nav-link" data-nav-link>Home</a>
+        <a href="#projects" class="nav-link" data-nav-link>Projects</a>
         <a href="#skills" class="nav-link" data-nav-link>Skills</a>
-        <a href="#certifications" class="nav-link" data-nav-link>Certifications</a>
+        <a href="#experience" class="nav-link" data-nav-link>Experience</a>
         <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+        <a href="../Sevenni Dinesh Resume.pdf" class="nav-cta" download>Resume</a>
       </nav>
       <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition flex items-center justify-center gap-2"></button>
     </div>
@@ -48,19 +48,23 @@
 
   <main class="pt-16 pb-20 space-y-20 md:pt-24 md:pb-32 md:space-y-32">
     <!-- HERO SECTION -->
-    <section id="about" class="hero-spotlight flex flex-col items-center justify-center px-4 py-8 md:py-16 transition-colors duration-300 scroll-target">
+    <section id="home" class="hero-spotlight flex flex-col items-center justify-center px-4 py-8 md:py-16 transition-colors duration-300 scroll-target">
       <div class="max-w-3xl mx-auto text-center">
         <img src="../assets/images/profile.webp" alt="S. Dinesh" class="reveal w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 md:mb-8 shadow ring-1 object-cover" style="outline-color: var(--border);" loading="lazy" decoding="async" />
         
         <h1 class="reveal reveal-delay-1 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-2 md:mb-3" style="color: var(--text);">
-          Hi, I'm <span style="color: var(--button-bg);">S. Dinesh</span>
+          S. Dinesh
         </h1>
         
-        <p class="reveal reveal-delay-2 text-base md:text-lg lg:text-xl font-semibold mb-3 md:mb-4" style="color: var(--button-bg);">
+        <p class="reveal reveal-delay-2 text-base md:text-lg lg:text-xl font-semibold mb-2" style="color: var(--button-bg);">
+          Software Development Engineer
+        </p>
+
+        <p class="reveal reveal-delay-3 text-sm md:text-base font-semibold mb-4" style="color: var(--button-bg);">
           <span id="typing-effect"></span><span class="cursor" style="color: var(--button-bg);"></span>
         </p>
         
-        <p class="reveal reveal-delay-3 max-w-2xl mx-auto mb-6 md:mb-8 text-sm md:text-base leading-relaxed" style="color: var(--text-light);">
+        <p class="reveal max-w-2xl mx-auto mb-6 md:mb-8 text-sm md:text-base leading-relaxed" style="color: var(--text-light);">
           Full-stack software engineer shipping production systems. At Hitachi Energy, I built an enterprise Travel Request platform using Next.js, Express and MSSQL.
         </p>
         
@@ -69,12 +73,8 @@
         </span>
         
         <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 mb-6 md:mb-10">
-          <a href="#contact" aria-label="Get in touch - scroll to contact form" class="btn-primary">
-            Get in Touch
-          </a>
-          <a href="../Sevenni Dinesh Resume.pdf" download aria-label="Download resume PDF" class="btn-secondary">
-            Download Resume <i class="fas fa-download ml-2"></i>
-          </a>
+          <a href="#projects" aria-label="View projects" class="btn-primary">View Projects</a>
+          <a href="../Sevenni Dinesh Resume.pdf" download aria-label="Download resume PDF" class="btn-secondary">Download Resume</a>
         </div>
         
         <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12">
@@ -88,6 +88,11 @@
             <i class="fas fa-envelope"></i> Email
           </a>
         </div>
+
+        <div class="surface-card reveal mb-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] mb-2">Currently building</p>
+          <p class="text-[var(--text-light)]">AI-powered oral cancer detection optimization using DenseNet201 + AO</p>
+        </div>
         
         <ul class="space-y-2 md:space-y-3 max-w-2xl mx-auto text-xs md:text-sm list-none" style="color: var(--text-light);">
           <li>✓ Enterprise-grade Travel Request System (Next.js + Express + MSSQL)</li>
@@ -97,10 +102,206 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="internship" class="px-4 transition-colors duration-300 scroll-target">
+    <section class="section-shell scroll-target">
+      <div class="section-inner">
+        <div class="credibility-strip reveal">
+          <div class="credibility-item">
+            <p class="text-lg font-semibold">Enterprise-grade Travel Request System</p>
+            <p class="text-sm text-[var(--text-light)]">Next.js + Express + MSSQL</p>
+          </div>
+          <div class="credibility-item">
+            <p class="text-lg font-semibold">Architecture + clean code</p>
+            <p class="text-sm text-[var(--text-light)]">Scalable backend workflows</p>
+          </div>
+          <div class="credibility-item">
+            <p class="text-lg font-semibold">End-to-end ownership</p>
+            <p class="text-sm text-[var(--text-light)]">Frontend + backend + deployment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED SYSTEMS SECTION -->
+    <section id="featured-work" class="px-4 transition-colors duration-300 scroll-target">
       <div class="max-w-5xl mx-auto">
-        <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Experience</h2>
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Featured Work</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Featured Systems</h2>
+        <div class="featured-grid">
+          <article class="surface-card project-card reveal">
+            <h3 class="text-2xl font-semibold mb-2">AI Oral Cancer Detection</h3>
+            <p class="text-[var(--text-light)]">Deep learning pipeline that detects oral abnormalities from clinical images with reproducible inference flow.</p>
+            <p class="text-sm text-[var(--text-light)] mt-3">Architecture: User → Frontend → Backend API → Model / Database → Output</p>
+            <svg class="mt-4 w-full" viewBox="0 0 520 60" role="img" aria-label="System flow diagram">
+              <rect x="8" y="12" width="80" height="36" rx="10" fill="rgba(34, 211, 238, 0.18)"></rect>
+              <rect x="118" y="12" width="90" height="36" rx="10" fill="rgba(56, 189, 248, 0.18)"></rect>
+              <rect x="238" y="12" width="90" height="36" rx="10" fill="rgba(14, 165, 233, 0.18)"></rect>
+              <rect x="348" y="12" width="90" height="36" rx="10" fill="rgba(34, 211, 238, 0.18)"></rect>
+              <rect x="458" y="12" width="54" height="36" rx="10" fill="rgba(56, 189, 248, 0.18)"></rect>
+              <text x="48" y="35" font-size="12" fill="currentColor" text-anchor="middle">User</text>
+              <text x="163" y="35" font-size="12" fill="currentColor" text-anchor="middle">Frontend</text>
+              <text x="283" y="35" font-size="12" fill="currentColor" text-anchor="middle">API</text>
+              <text x="393" y="35" font-size="12" fill="currentColor" text-anchor="middle">Model/DB</text>
+              <text x="485" y="35" font-size="12" fill="currentColor" text-anchor="middle">Output</text>
+            </svg>
+            <div class="project-actions">
+              <a href="#" class="btn-secondary btn-sm">Live</a>
+              <a href="https://github.com/dinesh2841" class="btn-primary btn-sm">Code</a>
+            </div>
+          </article>
+          <article class="surface-card project-card reveal reveal-delay-1">
+            <h3 class="text-2xl font-semibold mb-2">IoT Depth Mapping</h3>
+            <p class="text-[var(--text-light)]">Real-time lake depth mapping system combining ESP32 sensors, GPS, and interactive visualization.</p>
+            <p class="text-sm text-[var(--text-light)] mt-3">Architecture: User → Frontend → Backend API → Model / Database → Output</p>
+            <svg class="mt-4 w-full" viewBox="0 0 520 60" role="img" aria-label="System flow diagram">
+              <rect x="8" y="12" width="80" height="36" rx="10" fill="rgba(34, 211, 238, 0.18)"></rect>
+              <rect x="118" y="12" width="90" height="36" rx="10" fill="rgba(56, 189, 248, 0.18)"></rect>
+              <rect x="238" y="12" width="90" height="36" rx="10" fill="rgba(14, 165, 233, 0.18)"></rect>
+              <rect x="348" y="12" width="90" height="36" rx="10" fill="rgba(34, 211, 238, 0.18)"></rect>
+              <rect x="458" y="12" width="54" height="36" rx="10" fill="rgba(56, 189, 248, 0.18)"></rect>
+              <text x="48" y="35" font-size="12" fill="currentColor" text-anchor="middle">User</text>
+              <text x="163" y="35" font-size="12" fill="currentColor" text-anchor="middle">Frontend</text>
+              <text x="283" y="35" font-size="12" fill="currentColor" text-anchor="middle">API</text>
+              <text x="393" y="35" font-size="12" fill="currentColor" text-anchor="middle">Model/DB</text>
+              <text x="485" y="35" font-size="12" fill="currentColor" text-anchor="middle">Output</text>
+            </svg>
+            <div class="project-actions">
+              <a href="#" class="btn-secondary btn-sm">Live</a>
+              <a href="https://github.com/dinesh2841" class="btn-primary btn-sm">Code</a>
+            </div>
+          </article>
+        </div>
+        <div class="surface-card reveal mt-10 text-center">
+          <p class="text-[var(--text-light)] mb-4">Interested in working together?</p>
+          <div class="contact-actions">
+            <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary btn-sm">Download Resume</a>
+            <a href="#contact" class="btn-secondary btn-sm">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="px-4 transition-colors duration-300 scroll-target">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Projects</h2>
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <button class="btn-secondary btn-sm" data-filter-btn data-filter="all">All</button>
+          <button class="btn-secondary btn-sm" data-filter-btn data-filter="full-stack">Full-Stack</button>
+          <button class="btn-secondary btn-sm" data-filter-btn data-filter="systems">Systems</button>
+          <button class="btn-secondary btn-sm" data-filter-btn data-filter="ai">AI/ML</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <article class="surface-card project-card reveal" data-project-category="full-stack systems">
+            <h3 class="text-xl font-semibold mb-2">Enterprise Travel Request System</h3>
+            <p class="text-sm leading-relaxed mb-4" style="color: var(--text-light);">
+              Production-grade internal tool for employee travel approvals with role-based access, multi-step workflows, draft persistence, and automated emails.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-chip">Next.js</span>
+              <span class="badge-chip">Express</span>
+              <span class="badge-chip">MSSQL</span>
+              <span class="badge-chip">Microsoft SSO</span>
+            </div>
+            <div class="text-xs text-[var(--text-light)] mt-3">Deployed on: GitHub Pages</div>
+            <div class="project-actions">
+              <a href="#" class="btn-secondary btn-sm">Live</a>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">Code</a>
+            </div>
+          </article>
+          
+          <article class="surface-card project-card reveal reveal-delay-1" data-project-category="full-stack">
+            <h3 class="text-xl font-semibold mb-2">Real-Time Dashboard</h3>
+            <p class="text-sm leading-relaxed mb-4" style="color: var(--text-light);">
+              Real-time data visualization dashboard using WebSocket connections with responsive charts optimized for high-frequency data streams.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-chip">React</span>
+              <span class="badge-chip">WebSocket</span>
+              <span class="badge-chip">Node.js</span>
+            </div>
+            <div class="text-xs text-[var(--text-light)] mt-3">Deployed on: GitHub Pages</div>
+            <div class="project-actions">
+              <a href="#" class="btn-secondary btn-sm">Live</a>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">Code</a>
+            </div>
+          </article>
+          
+          <article class="surface-card project-card reveal reveal-delay-2" data-project-category="systems">
+            <h3 class="text-xl font-semibold mb-2">REST API Backend</h3>
+            <p class="text-sm leading-relaxed mb-4" style="color: var(--text-light);">
+              Scalable REST API with JWT authentication, role-based access control, and comprehensive error handling deployed with CI/CD.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-chip">Express</span>
+              <span class="badge-chip">PostgreSQL</span>
+              <span class="badge-chip">JWT Auth</span>
+            </div>
+            <div class="text-xs text-[var(--text-light)] mt-3">Deployed on: GitHub Pages</div>
+            <div class="project-actions">
+              <a href="#" class="btn-secondary btn-sm">Live</a>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">Code</a>
+            </div>
+          </article>
+        </div>
+        <div class="surface-card reveal mt-10 text-center">
+          <p class="text-[var(--text-light)] mb-4">Interested in working together?</p>
+          <div class="contact-actions">
+            <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary btn-sm">Download Resume</a>
+            <a href="#contact" class="btn-secondary btn-sm">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="px-4 transition-colors duration-300 scroll-target">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="surface-card reveal">
+            <div class="skill-group">
+              <h3 class="text-xl font-semibold">Frontend</h3>
+              <p class="text-sm text-[var(--text-light)]">React.js, Next.js, TypeScript, Tailwind</p>
+              <div class="skill-meta"><span>Experience</span><span>Advanced</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--level: 74%"></div></div>
+            </div>
+          </article>
+          
+          <article class="surface-card reveal reveal-delay-1">
+            <div class="skill-group">
+              <h3 class="text-xl font-semibold">Backend</h3>
+              <p class="text-sm text-[var(--text-light)]">Node.js, Express, REST APIs, Auth</p>
+              <div class="skill-meta"><span>Experience</span><span>Advanced</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--level: 70%"></div></div>
+            </div>
+          </article>
+          
+          <article class="surface-card reveal">
+            <div class="skill-group">
+              <h3 class="text-xl font-semibold">Databases</h3>
+              <p class="text-sm text-[var(--text-light)]">MSSQL, PostgreSQL, MongoDB, Firebase</p>
+              <div class="skill-meta"><span>Experience</span><span>Proficient</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--level: 64%"></div></div>
+            </div>
+          </article>
+          
+          <article class="surface-card reveal reveal-delay-1">
+            <div class="skill-group">
+              <h3 class="text-xl font-semibold">DevOps</h3>
+              <p class="text-sm text-[var(--text-light)]">Git/GitHub, Docker, VS Code, Postman</p>
+              <div class="skill-meta"><span>Experience</span><span>Proficient</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--level: 60%"></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="experience" class="px-4 transition-colors duration-300 scroll-target">
+      <div class="max-w-5xl mx-auto">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Experience</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Experience</h2>
         <div class="surface-card reveal" style="border-left: 4px solid var(--button-bg);">
           <h3 class="text-xl md:text-2xl font-semibold mb-2" style="color: var(--button-bg);">Hitachi Energy — Software Engineering Intern</h3>
           <p class="text-xs md:text-sm font-medium mb-5 md:mb-6" style="color: var(--text-light);">Aug 2025 – Present</p>
@@ -113,83 +314,11 @@
             <li>Developed Manager Dashboard with filtering, sorting, status tracking, and approval handling</li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- FEATURED PROJECTS SECTION -->
-    <section id="featured" class="px-4 transition-colors duration-300 scroll-target">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <div class="surface-card reveal" style="border-left: 4px solid var(--button-bg);">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Enterprise Travel Request System</h3>
-              <p class="text-sm font-semibold mb-3" style="color: var(--button-bg);">Next.js • Express • MSSQL • Microsoft SSO</p>
-              <p class="text-sm leading-relaxed mb-4" style="color: var(--text-light);">
-                Production-grade internal tool for employee travel approvals. Role-based access, multi-step workflows, draft persistence, automated emails, manager dashboard for request tracking.
-              </p>
-            </div>
-            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View Enterprise Travel Request System on GitHub (opens in new tab)" class="text-sm font-semibold underline transition-colors hover:opacity-70" style="color: var(--button-bg);">
-              View on GitHub →
-            </a>
-          </div>
-          
-          <div class="surface-card reveal reveal-delay-1">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Real-Time Dashboard</h3>
-              <p class="text-sm font-semibold mb-3" style="color: var(--button-bg);">React • WebSocket • Node.js</p>
-              <p class="text-sm leading-relaxed mb-4" style="color: var(--text-light);">
-                Real-time data visualization dashboard using WebSocket connections. Dynamic updates, responsive charts, performance optimized for high-frequency data streams.
-              </p>
-            </div>
-            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View Real-Time Dashboard on GitHub (opens in new tab)" class="text-sm font-semibold underline transition-colors hover:opacity-70" style="color: var(--button-bg);">
-              View on GitHub →
-            </a>
-          </div>
-          
-          <div class="surface-card reveal reveal-delay-2">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">REST API Backend</h3>
-              <p class="text-sm font-semibold mb-3" style="color: var(--button-bg);">Express • PostgreSQL • JWT Auth</p>
-              <p class="text-sm leading-relaxed mb-4" style="color: var(--text-light);">
-                Scalable REST API with JWT authentication, role-based access control, and comprehensive error handling. Deployed with CI/CD pipelines.
-              </p>
-            </div>
-            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View REST API Backend on GitHub (opens in new tab)" class="text-sm font-semibold underline transition-colors hover:opacity-70" style="color: var(--button-bg);">
-              View on GitHub →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="px-4 transition-colors duration-300 scroll-target">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="surface-card reveal text-center">
-            <i class="fas fa-globe text-5xl md:text-6xl mb-3 md:mb-4" style="color: var(--button-bg);"></i>
-            <h3 class="text-base md:text-lg font-semibold mb-2" style="color: var(--text);">Frontend</h3>
-            <p class="text-xs md:text-sm leading-relaxed" style="color: var(--text-light);">React.js, Next.js, TypeScript, Tailwind</p>
-          </div>
-          
-          <div class="surface-card reveal reveal-delay-1 text-center">
-            <i class="fas fa-server text-5xl md:text-6xl mb-3 md:mb-4" style="color: var(--button-bg);"></i>
-            <h3 class="text-base md:text-lg font-semibold mb-2" style="color: var(--text);">Backend</h3>
-            <p class="text-xs md:text-sm leading-relaxed" style="color: var(--text-light);">Node.js, Express, REST APIs, Auth</p>
-          </div>
-          
-          <div class="surface-card reveal reveal-delay-2 text-center">
-            <i class="fas fa-database text-5xl md:text-6xl mb-3 md:mb-4" style="color: var(--button-bg);"></i>
-            <h3 class="text-base md:text-lg font-semibold mb-2" style="color: var(--text);">Databases</h3>
-            <p class="text-xs md:text-sm leading-relaxed" style="color: var(--text-light);">MSSQL, PostgreSQL, MongoDB, Firebase</p>
-          </div>
-          
-          <div class="surface-card reveal reveal-delay-3 text-center">
-            <i class="fas fa-tools text-5xl md:text-6xl mb-3 md:mb-4" style="color: var(--button-bg);"></i>
-            <h3 class="text-base md:text-lg font-semibold mb-2" style="color: var(--text);">DevOps</h3>
-            <p class="text-xs md:text-sm leading-relaxed" style="color: var(--text-light);">Git/GitHub, Docker, VS Code, Postman</p>
+        <div class="surface-card reveal mt-10 text-center">
+          <p class="text-[var(--text-light)] mb-4">Interested in working together?</p>
+          <div class="contact-actions">
+            <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary btn-sm">Download Resume</a>
+            <a href="#contact" class="btn-secondary btn-sm">Contact Me</a>
           </div>
         </div>
       </div>
@@ -332,6 +461,32 @@
             </div>
           </div>
         </div>
+        <div class="surface-card reveal mt-10 text-center">
+          <p class="text-[var(--text-light)] mb-4">Interested in working together?</p>
+          <div class="contact-actions">
+            <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary btn-sm">Download Resume</a>
+            <a href="#contact" class="btn-secondary btn-sm">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="px-4 transition-colors duration-300 scroll-target">
+      <div class="max-w-3xl mx-auto">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">About</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">About</h2>
+        <div class="surface-card reveal">
+          <p class="text-sm md:text-base leading-relaxed" style="color: var(--text-light);">
+            I am a software development engineer specializing in full-stack web applications, backend systems, and scalable data workflows. I focus on building reliable products with clean architecture, performance-first engineering, and measurable business outcomes. I enjoy solving problems that combine user experience with robust system design.
+          </p>
+        </div>
+        <div class="surface-card reveal mt-10 text-center">
+          <p class="text-[var(--text-light)] mb-4">Interested in working together?</p>
+          <div class="contact-actions">
+            <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary btn-sm">Download Resume</a>
+            <a href="#contact" class="btn-secondary btn-sm">Contact Me</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -340,26 +495,33 @@
       <div class="max-w-3xl mx-auto">
         <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12" style="color: var(--text);">Contact</h2>
         <div class="contact-card reveal">
+          <p class="text-center mb-4 text-sm md:text-base leading-relaxed" style="color: var(--text-light);">Open to software developer roles.</p>
+          <div class="contact-actions mb-6">
+            <a href="mailto:sevennidinesh@gmail.com" class="btn-secondary btn-sm">Email</a>
+            <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-sm">LinkedIn</a>
+            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-sm">GitHub</a>
+            <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary btn-sm">Resume</a>
+          </div>
           <p class="text-center mb-6 md:mb-8 text-sm md:text-base leading-relaxed" style="color: var(--text-light);">
             Interested in collaborating or have a question? Let's connect.
           </p>
           <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-4 md:space-y-6 text-left">
             <div>
               <label for="name" class="block text-xs md:text-sm font-semibold mb-2" style="color: var(--text);">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your full name" class="w-full px-3 md:px-4 py-2 md:py-2.5 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-offset-0" style="border-color: var(--border); color: var(--text);" />
+              <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your full name" class="input-field" />
             </div>
             
             <div>
               <label for="email" class="block text-xs md:text-sm font-semibold mb-2" style="color: var(--text);">Email</label>
-              <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-label="Your email address" class="w-full px-3 md:px-4 py-2 md:py-2.5 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-offset-0" style="border-color: var(--border); color: var(--text);" />
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-label="Your email address" class="input-field" />
             </div>
             
             <div>
               <label for="message" class="block text-xs md:text-sm font-semibold mb-2" style="color: var(--text);">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required aria-label="Your message" class="w-full px-3 md:px-4 py-2 md:py-2.5 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-offset-0" style="border-color: var(--border); color: var(--text);"></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required aria-label="Your message" class="input-field"></textarea>
             </div>
             
-            <button type="submit" class="w-full text-center font-bold py-2.5 md:py-3 px-6 rounded-lg shadow-md transition-all hover:shadow-lg duration-200 text-sm md:text-base" aria-label="Send message to S. Dinesh" style="background: var(--button-bg); color: var(--button-text);">
+            <button type="submit" class="btn-primary w-full text-center" aria-label="Send message to S. Dinesh">
               Send Message <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i>
             </button>
           </form>
