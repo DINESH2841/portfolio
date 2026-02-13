@@ -20,14 +20,14 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script>
     (function applyInitialTheme() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
+      const savedTheme = localStorage.getItem('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
   <script defer src="assets/theme.js"></script>
 </head>
 
-<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="dark">
   <header class="site-header">
     <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
       <a href="/" class="text-2xl font-bold tracking-tight text-[var(--text)]">S. Dinesh</a>
@@ -58,7 +58,7 @@
           <!-- Role Selector Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <!-- SDE Role Card -->
-            <a id="sde" href="sde/" aria-label="Software Development Engineer portfolio" class="card-premium group reveal reveal-delay-1 scroll-target">
+            <a id="sde" href="sde/" aria-label="Software Development Engineer portfolio" class="card-premium role-card group reveal reveal-delay-1 scroll-target">
               <div>
                 <div class="text-4xl mb-4 text-[var(--button-bg)]">
                   <i class="fas fa-code" aria-hidden="true"></i>
@@ -71,7 +71,7 @@
             </a>
             
             <!-- Full-Stack Role Card -->
-            <a id="full-stack" href="full-stack/" aria-label="Full-Stack developer portfolio" class="card-premium group reveal reveal-delay-2 scroll-target">
+            <a id="full-stack" href="full-stack/" aria-label="Full-Stack developer portfolio" class="card-premium role-card group reveal reveal-delay-2 scroll-target">
               <div>
                 <div class="text-4xl mb-4 text-[#16a34a]">
                   <i class="fas fa-layer-group" aria-hidden="true"></i>
@@ -84,7 +84,7 @@
             </a>
             
             <!-- IoT Role Card -->
-            <a id="iot" href="iot/" aria-label="IoT engineer portfolio" class="card-premium group reveal reveal-delay-3 scroll-target">
+            <a id="iot" href="iot/" aria-label="IoT engineer portfolio" class="card-premium role-card group reveal reveal-delay-3 scroll-target">
               <div>
                 <div class="text-4xl mb-4 text-[#9333ea]">
                   <i class="fas fa-microchip" aria-hidden="true"></i>
@@ -97,7 +97,7 @@
             </a>
             
             <!-- Resume Card -->
-            <a id="resume" href="resume/" aria-label="Download resume" class="card-premium group reveal scroll-target">
+            <a id="resume" href="resume/" aria-label="Download resume" class="card-premium role-card group reveal scroll-target">
               <div>
                 <div class="text-4xl mb-4 text-[#ea580c]">
                   <i class="fas fa-file-pdf" aria-hidden="true"></i>
