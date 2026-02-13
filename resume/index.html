@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>S. Dinesh | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="S. Dinesh - Resume & Download">
+  <meta name="keywords" content="S. Dinesh, Resume, CV, Download">
+  <meta name="author" content="S. Dinesh">
+  <meta property="og:title" content="S. Dinesh | Resume" />
+  <meta property="og:description" content="Download my resume" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dinesh2841.github.io/resume/" />
+  <meta property="og:image" content="https://dinesh2841.github.io/assets/images/profile.webp" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script>
+    (function applyInitialTheme() {
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      root.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <script defer src="../assets/theme.js"></script>
+</head>
+
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <a href="/" class="text-2xl font-bold tracking-tight text-[var(--text)]">S. Dinesh</a>
+        <span class="text-sm font-semibold text-[var(--button-bg)]">Resume</span>
+      </div>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#downloads" class="nav-link" data-nav-link>Resume Downloads</a>
+        <a href="#portfolios" class="nav-link" data-nav-link>Role-Specific Portfolios</a>
+        <a href="#quick-links" class="nav-link" data-nav-link>Quick Links</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition flex items-center justify-center gap-2"></button>
+    </div>
+  </header>
+
+  <main class="pt-16 pb-20 space-y-20 md:pt-24 md:pb-32 md:space-y-32">
+    <section class="hero-spotlight flex flex-col items-center justify-center px-4 py-8 md:py-16 transition-colors duration-300 scroll-target" style="background: var(--bg);">
+      <div class="max-w-3xl mx-auto text-center">
+        <img src="../assets/images/profile.webp" alt="S. Dinesh" class="reveal w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 md:mb-8 shadow ring-1 object-cover" style="outline-color: var(--border);" loading="lazy" decoding="async" />
+        <h1 class="reveal reveal-delay-1 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-2 md:mb-3" style="color: var(--text);">
+          S. Dinesh
+        </h1>
+        <p class="reveal reveal-delay-2 text-base md:text-lg max-w-2xl mx-auto" style="color: var(--text-light);">
+          Software Engineer • Full-Stack Developer • IoT Enthusiast
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+          <div class="p-4 md:p-6 rounded-lg border" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-map-marker-alt text-xl md:text-2xl mb-2 md:mb-3" style="color: var(--button-bg);"></i>
+            <p style="color: var(--text-light);" class="text-sm md:text-base">Chennai, India</p>
+          </div>
+          <div class="p-4 md:p-6 rounded-lg border" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-envelope text-xl md:text-2xl mb-2 md:mb-3" style="color: var(--button-bg);"></i>
+            <a href="mailto:sevennidinesh@gmail.com" style="color: var(--button-bg);" class="hover:underline text-xs md:text-sm">sevennidinesh@gmail.com</a>
+          </div>
+          <div class="p-4 md:p-6 rounded-lg border" style="background: var(--bg); border-color: var(--border);">
+            <i class="fas fa-phone text-xl md:text-2xl mb-2 md:mb-3" style="color: var(--button-bg);"></i>
+            <p style="color: var(--text-light);" class="text-sm md:text-base">+91 XXXX XXX XXX</p>
+          </div>
+        </div>
+
+        <div id="downloads" class="mb-8 md:mb-12 scroll-target">
+          <h2 class="reveal text-xl md:text-2xl font-bold mb-4 md:mb-6" style="color: var(--text);">Resume Downloads</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <!-- General Resume -->
+            <a href="../Sevenni Dinesh Resume.pdf" download aria-label="Download general resume" class="surface-card reveal">
+              <i class="fas fa-file-pdf text-3xl md:text-4xl mb-2 md:mb-3" style="color: var(--button-bg);"></i>
+              <h3 class="text-lg md:text-xl font-bold mb-2" style="color: var(--text);">General Resume</h3>
+              <p style="color: var(--text-light);" class="text-xs md:text-sm mb-3 md:mb-4">
+                Complete resume with all experience, projects, and skills
+              </p>
+              <button class="btn-primary inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-md font-medium text-xs md:text-sm focus:outline-none focus:ring-2 transition">
+                <i class="fas fa-download"></i>Download
+              </button>
+            </a>
+
+            <!-- Role-Specific Info -->
+            <div id="portfolios" class="surface-card reveal reveal-delay-1 scroll-target">
+              <i class="fas fa-briefcase text-4xl mb-3" style="color: var(--button-bg);"></i>
+              <h3 class="text-xl font-bold mb-2" style="color: var(--text);">Role-Specific Portfolios</h3>
+              <p style="color: var(--text-light);" class="text-sm mb-4">
+                Tailored portfolios by specialization for targeted applications
+              </p>
+              <div class="flex flex-col gap-2">
+                <a href="/sde/" class="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md transition" style="background: var(--border); color: var(--button-bg);">
+                  <i class="fas fa-code"></i>SDE Portfolio
+                </a>
+                <a href="/full-stack/" class="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md transition" style="background: var(--border); color: var(--button-bg);">
+                  <i class="fas fa-layer-group"></i>Full-Stack Portfolio
+                </a>
+                <a href="/iot/" class="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md transition" style="background: var(--border); color: var(--button-bg);">
+                  <i class="fas fa-microchip"></i>IoT Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="quick-links" class="rounded-lg p-8 border scroll-target" style="background: var(--border); border-color: var(--border);">
+          <h2 class="reveal text-2xl font-bold mb-4" style="color: var(--text);">Quick Links</h2>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fab fa-linkedin"></i>LinkedIn
+            </a>
+            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fab fa-github"></i>GitHub
+            </a>
+            <a href="mailto:sevennidinesh@gmail.com" aria-label="Email" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fas fa-envelope"></i>Email
+            </a>
+            <a href="/" aria-label="Back to Portfolio" class="inline-flex items-center gap-2 px-4 py-2 rounded-md transition" style="background: var(--button-bg); color: var(--button-text);">
+              <i class="fas fa-arrow-left"></i>Back to Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: var(--bg); border-color: var(--border);" class="py-8 text-center border-t">
+    <div class="container mx-auto px-4">
+      <p class="text-sm" style="color: var(--text-light);">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
+      <p style="color: var(--text-light);">&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function setupFooterYear() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

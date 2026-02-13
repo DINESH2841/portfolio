@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S. Dinesh | IoT & Embedded Systems Engineer</title>
+  <meta name="description" content="IoT & Embedded Systems Portfolio - ESP32, MQTT, automation platforms, and real-time telemetry dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    (function applyInitialTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <script defer src="../assets/theme.js"></script>
+</head>
+
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <a href="/" class="text-2xl font-bold tracking-tight text-[var(--text)]">S. Dinesh</a>
+        <span class="text-sm font-semibold text-[var(--button-bg)]">IoT</span>
+      </div>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#projects" class="nav-link" data-nav-link>Projects</a>
+        <a href="#skills" class="nav-link" data-nav-link>Skills</a>
+        <a href="#certifications" class="nav-link" data-nav-link>Certifications</a>
+        <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition flex items-center justify-center gap-2"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-shell hero-spotlight">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.35em] text-[var(--text-light)] mb-6">IoT & Embedded Systems</p>
+        <img src="../assets/images/profile.webp" alt="Portrait of S. Dinesh" class="reveal reveal-delay-1 w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-8 shadow-xl object-cover border border-[var(--border)]" />
+        <h1 class="reveal reveal-delay-2 text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+          Connected systems crafted with <span class="text-[var(--button-bg)]">precision</span>
+        </h1>
+        <p class="reveal reveal-delay-3 text-lg md:text-xl max-w-3xl mx-auto text-[var(--text-light)]">
+          I build resilient embedded products across ESP32, STM32, and Raspberry Pi, layering secure MQTT, OTA updates, and real-time telemetry dashboards for industrial and consumer environments.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary">Download Resume</a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+          <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" class="link-pill"><i class="fab fa-linkedin"></i>LinkedIn</a>
+          <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="link-pill"><i class="fab fa-github"></i>GitHub</a>
+          <a href="mailto:sevennidinesh@gmail.com" class="link-pill"><i class="fas fa-envelope"></i>Email</a>
+        </div>
+        <div class="stats-grid">
+          <div>
+            <p class="text-3xl font-bold">25+</p>
+            <p class="text-sm text-[var(--text-light)]">Devices automated end-to-end</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold">12</p>
+            <p class="text-sm text-[var(--text-light)]">Protocols integrated (WiFi, BLE, LoRa)</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold">5</p>
+            <p class="text-sm text-[var(--text-light)]">Production-grade dashboards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="projects">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Case Studies</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Featured Projects</h2>
+        <div class="project-grid">
+          <article class="card-premium reveal">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Industrial IoT Monitoring</h3>
+                <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">ESP32</span>
+              </div>
+              <p class="text-[var(--text-light)]">Redundant ESP32 nodes stream air-quality, vibration, and thermal data to a Raspberry Pi MQTT broker with live alerting dashboards.</p>
+              <ul class="text-sm text-[var(--text-light)] space-y-2 list-disc list-inside">
+                <li>Secure TLS tunnel with device authentication</li>
+                <li>Edge buffering + automatic retry for outages</li>
+                <li>Grafana UI with 5s refresh cadence</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-[var(--border)] text-sm">
+              <span class="text-[var(--text-light)]">Stack: ESP-IDF · MQTT · Node.js</span>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-[var(--button-bg)] font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card-premium reveal reveal-delay-1">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Home Automation Hub</h3>
+                <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">Automation</span>
+              </div>
+              <p class="text-[var(--text-light)]">Unified control surface for lighting, HVAC, and energy meters with scheduling, presets, and responsive PWA controls.</p>
+              <ul class="text-sm text-[var(--text-light)] space-y-2 list-disc list-inside">
+                <li>REST + MQTT hybrid API for instant + batch updates</li>
+                <li>Role-based access and audit logs</li>
+                <li>OTA firmware updates rolled out in cohorts</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-[var(--border)] text-sm">
+              <span class="text-[var(--text-light)]">Stack: ESPHome · React PWA · FastAPI</span>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-[var(--button-bg)] font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card-premium reveal reveal-delay-2">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Environmental Logger</h3>
+                <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">Telemetry</span>
+              </div>
+              <p class="text-[var(--text-light)]">Modular sensor stack records particulate, temperature, and barometric data locally and syncs to the cloud for long-term analytics.</p>
+              <ul class="text-sm text-[var(--text-light)] space-y-2 list-disc list-inside">
+                <li>Dual-write SD + cloud persistence</li>
+                <li>Low-power sampling windows with wake-on-event</li>
+                <li>Companion React Native dashboard</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-[var(--border)] text-sm">
+              <span class="text-[var(--text-light)]">Stack: ESP32 · InfluxDB · React Native</span>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-[var(--button-bg)] font-semibold">GitHub →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="skills">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Technical Range</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Skills</h2>
+        <div class="skills-grid">
+          <article class="card-premium reveal text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-microchip"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Microcontrollers</h3>
+            <p class="text-sm text-[var(--text-light)]">ESP32 · STM32 · Arduino · FreeRTOS</p>
+          </article>
+          <article class="card-premium reveal reveal-delay-1 text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-broadcast-tower"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Wireless & Protocols</h3>
+            <p class="text-sm text-[var(--text-light)]">MQTT · BLE · Wi-Fi · LoRa · Modbus</p>
+          </article>
+          <article class="card-premium reveal reveal-delay-2 text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-code"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Firmware & Edge</h3>
+            <p class="text-sm text-[var(--text-light)]">Embedded C/C++ · OTA · Device security</p>
+          </article>
+          <article class="card-premium reveal reveal-delay-3 text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-cloud"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Cloud & Dashboards</h3>
+            <p class="text-sm text-[var(--text-light)]">AWS IoT · Node.js · Next.js · Grafana</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="certifications">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Validation</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Certifications</h2>
+        <div class="cert-grid">
+          <article class="card-premium reveal">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Oracle AI Foundations</h3>
+                <p class="text-sm text-[var(--text-light)]">Oracle · 2024</p>
+              </div>
+              <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">AI/ML</span>
+            </div>
+            <p class="text-sm text-[var(--text-light)] mt-4">Leveraged AI services to augment predictive maintenance flows.</p>
+            <a href="#" class="text-[var(--button-bg)] font-semibold mt-4">Verify Credential →</a>
+          </article>
+          <article class="card-premium reveal reveal-delay-1">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">IoT (NPTEL)</h3>
+                <p class="text-sm text-[var(--text-light)]">NPTEL · 2025</p>
+              </div>
+              <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">IoT</span>
+            </div>
+            <p class="text-sm text-[var(--text-light)] mt-4">Comprehensive training on embedded comms, gateways, and analytics.</p>
+            <a href="#" class="text-[var(--button-bg)] font-semibold mt-4">Verify Credential →</a>
+          </article>
+          <article class="card-premium reveal reveal-delay-2">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Python for Data Science</h3>
+                <p class="text-sm text-[var(--text-light)]">NPTEL · 2024</p>
+              </div>
+              <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">Data</span>
+            </div>
+            <p class="text-sm text-[var(--text-light)] mt-4">Backbone for analytics, alert thresholds, and on-device ML.</p>
+            <a href="#" class="text-[var(--button-bg)] font-semibold mt-4">Verify Credential →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="contact">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Availability</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Contact</h2>
+        <div class="contact-card reveal">
+          <p class="text-center text-[var(--text-light)] mb-6">Need a specialist for telemetry platforms, microcontroller firmware, or edge-to-cloud integrations? Send a note and I’ll respond within one business day.</p>
+          <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--bg)]" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--bg)]" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required placeholder="How can I help?" class="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--bg)]"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full text-center">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-8 border-t border-[var(--border)]">
+    <p class="text-sm text-[var(--text-light)]">© <span id="current-year"></span> S. Dinesh — IoT & Embedded Systems</p>
+  </footer>
+</body>
+</html>

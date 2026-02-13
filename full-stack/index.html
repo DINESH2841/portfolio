@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>S. Dinesh | Full-Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Full-Stack Engineer specializing in React, Next.js, Node.js, and scalable distributed systems." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.dataset.theme = saved;
+    })();
+  </script>
+  <script defer src="../assets/theme.js"></script>
+
+</head>
+
+<body class="page-fade bg-base text-theme" data-theme="light">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+      <a href="/" class="text-2xl font-bold text-theme">S. Dinesh</a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#about" class="nav-link" data-nav-link>About</a>
+        <a href="#projects" class="nav-link" data-nav-link>Projects</a>
+        <a href="#skills" class="nav-link" data-nav-link>Skills</a>
+        <a href="#certifications" class="nav-link" data-nav-link>Certifications</a>
+        <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      </nav>
+      <button id="theme-toggle" class="btn-secondary rounded-full border-theme p-3 flex items-center justify-center gap-1"></button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO -->
+    <section id="about" class="pt-28 pb-20 px-4 hero-spotlight scroll-target">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.35em] text-muted mb-6">Full-Stack Engineer</p>
+        <img src="../assets/images/profile.webp"
+          class="reveal reveal-delay-1 w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-8 shadow-xl object-cover border border-theme" alt="Portrait of S. Dinesh" />
+        <h1 class="reveal reveal-delay-2 text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+          Hello, I'm <span class="text-primary">S. Dinesh</span>
+        </h1>
+        <p class="reveal reveal-delay-3 text-lg md:text-xl text-muted max-w-3xl mx-auto">
+          I build resilient web platforms end-to-end using React, Next.js, Node.js, and cloud-native infrastructure. My work focuses on clean execution, predictable performance, and delightful UX across every device size.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+          <a href="#contact" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold shadow-lg shadow-[rgba(37,99,235,0.25)]">
+            Get in Touch
+          </a>
+          <a href="../Sevenni Dinesh Resume.pdf" download class="btn-secondary px-8 py-4 rounded-xl text-lg font-semibold">
+            Download Resume
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 text-left sm:text-center border-t border-dashed border-theme pt-8">
+          <div>
+            <p class="text-3xl font-bold">6+</p>
+            <p class="text-sm text-muted">Production builds shipped</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold"><span class="align-top text-xl">~</span>1M</p>
+            <p class="text-sm text-muted">Daily transactions supported</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold">3</p>
+            <p class="text-sm text-muted">Cloud platforms integrated</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" class="py-20 px-4 scroll-target">
+      <div class="max-w-6xl mx-auto">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-primary text-center mb-3">Case Studies</p>
+        <h2 class="reveal reveal-delay-1 section-title text-theme">Featured Projects</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <article class="card reveal h-full flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-2xl font-semibold">Travel Request Portal</h3>
+                <span class="badge">Next.js</span>
+              </div>
+              <p class="text-muted">
+                Enterprise-grade workflow portal layered with Microsoft SSO, automated approvals, and audit-grade logging built on the Next.js app router.
+              </p>
+              <ul class="text-sm text-muted space-y-2 list-disc list-inside">
+                <li>Role-based access & executive dashboards</li>
+                <li>Service integration with Teams notifications</li>
+                <li>Tailwind UI system for rapid delivery</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-6 mt-6 border-t border-theme text-sm text-muted">
+              <span>Stack: Next.js · Azure B2C · Prisma</span>
+              <a href="https://github.com/dinesh2841" class="text-primary font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-delay-1 h-full flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-2xl font-semibold">E-Commerce Dashboard</h3>
+                <span class="badge">Analytics</span>
+              </div>
+              <p class="text-muted">
+                Real-time operations cockpit that unifies sales, fulfilment, and cohort analytics with custom charting layers and streaming updates.
+              </p>
+              <ul class="text-sm text-muted space-y-2 list-disc list-inside">
+                <li>Live order feed with optimistic UI</li>
+                <li>Granular permission model for teams</li>
+                <li>Elastic scaling via serverless APIs</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-6 mt-6 border-t border-theme text-sm text-muted">
+              <span>Stack: React · Node.js · Supabase</span>
+              <a href="https://github.com/dinesh2841" class="text-primary font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-delay-2 h-full flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-2xl font-semibold">Editorial Blog Platform</h3>
+                <span class="badge">SSR</span>
+              </div>
+              <p class="text-muted">
+                Markdown-first publishing stack with instant previews, semantic search, and staged deployments for content teams.
+              </p>
+              <ul class="text-sm text-muted space-y-2 list-disc list-inside">
+                <li>Static + dynamic hybrid rendering</li>
+                <li>Full-text search powered by Meilisearch</li>
+                <li>Authoring workflows with review gates</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-6 mt-6 border-t border-theme text-sm text-muted">
+              <span>Stack: Next.js · Meilisearch · PlanetScale</span>
+              <a href="https://github.com/dinesh2841" class="text-primary font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 px-4 scroll-target">
+      <div class="max-w-6xl mx-auto">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-primary text-center mb-3">Technical Range</p>
+        <h2 class="reveal reveal-delay-1 section-title text-theme">Skills</h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+
+          <article class="card reveal h-full">
+            <h3 class="text-xl font-semibold mb-2">Frontend Systems</h3>
+            <p class="text-sm text-muted mb-4">Pixel-perfect React + Next.js builds.</p>
+            <ul class="space-y-2 text-sm text-muted list-disc list-inside">
+              <li>React 18 / Next 14</li>
+              <li>Tailwind + Framer Motion</li>
+              <li>Design tokens & accessibility</li>
+            </ul>
+          </article>
+
+          <article class="card reveal reveal-delay-1 h-full">
+            <h3 class="text-xl font-semibold mb-2">Backend APIs</h3>
+            <p class="text-sm text-muted mb-4">Secure services and automation.</p>
+            <ul class="space-y-2 text-sm text-muted list-disc list-inside">
+              <li>Node.js · Express · Nest</li>
+              <li>REST + Webhooks</li>
+              <li>Background job orchestration</li>
+            </ul>
+          </article>
+
+          <article class="card reveal reveal-delay-2 h-full">
+            <h3 class="text-xl font-semibold mb-2">Data Layer</h3>
+            <p class="text-sm text-muted mb-4">Modeling for resilience & insight.</p>
+            <ul class="space-y-2 text-sm text-muted list-disc list-inside">
+              <li>PostgreSQL · PlanetScale</li>
+              <li>MongoDB · Redis cache</li>
+              <li>Prisma & database migrations</li>
+            </ul>
+          </article>
+
+          <article class="card reveal reveal-delay-3 h-full">
+            <h3 class="text-xl font-semibold mb-2">Cloud & Ops</h3>
+            <p class="text-sm text-muted mb-4">Deployments with confidence.</p>
+            <ul class="space-y-2 text-sm text-muted list-disc list-inside">
+              <li>Azure · AWS · Vercel</li>
+              <li>Dockerized pipelines</li>
+              <li>Monitoring & incident playbooks</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-20 px-4 scroll-target">
+      <div class="max-w-6xl mx-auto">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-primary text-center mb-3">Validation</p>
+        <h2 class="reveal reveal-delay-1 section-title text-theme">Certifications</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <article class="card reveal space-y-4">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Artificial Intelligence Concepts</h3>
+                <p class="text-sm text-muted">NPTEL · 2025</p>
+              </div>
+              <span class="badge">AI/ML</span>
+            </div>
+            <p class="text-sm text-muted">Covered search, knowledge representation, supervised ML, and optimization that guide my data-backed product work.</p>
+            <a href="#" class="text-primary font-semibold">Verify →</a>
+          </article>
+
+          <article class="card reveal reveal-delay-1 space-y-4">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Oracle AI Foundations</h3>
+                <p class="text-sm text-muted">Oracle · 2024</p>
+              </div>
+              <span class="badge">Cloud</span>
+            </div>
+            <p class="text-sm text-muted">Learned to pair Oracle Cloud infrastructure with AI services to deploy intelligent assistants and data pipelines.</p>
+            <a href="#" class="text-primary font-semibold">Verify →</a>
+          </article>
+
+          <article class="card reveal reveal-delay-2 space-y-4">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Java for Beginners</h3>
+                <p class="text-sm text-muted">Udemy · 2025</p>
+              </div>
+              <span class="badge">Backend</span>
+            </div>
+            <p class="text-sm text-muted">Solidified OOP fundamentals, collections, and tooling which help when integrating JVM services.</p>
+            <a href="#" class="text-primary font-semibold">Verify →</a>
+          </article>
+
+          <article class="card reveal reveal-delay-3 space-y-4">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Programming in Java</h3>
+                <p class="text-sm text-muted">NPTEL · 2024</p>
+              </div>
+              <span class="badge">Java</span>
+            </div>
+            <p class="text-sm text-muted">Advanced Java constructs, threading, and performance tuning for services that complement JavaScript stacks.</p>
+            <a href="#" class="text-primary font-semibold">Verify →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-4 scroll-target">
+      <div class="max-w-6xl mx-auto">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-primary text-center mb-3">Availability</p>
+        <h2 class="reveal reveal-delay-1 section-title text-theme">Contact</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <article class="card reveal h-full space-y-6">
+            <h3 class="text-2xl font-semibold">Let’s move your roadmap faster.</h3>
+            <p class="text-muted">Whether you need a feature owner, a consultant, or a dedicated engineer, I collaborate closely with product, design, and DevOps teams to ship measurable outcomes.</p>
+            <div class="space-y-4 text-sm">
+              <div>
+                <p class="text-muted uppercase tracking-wide text-xs mb-1">Response Time</p>
+                <p class="font-semibold">Within 24 hours on weekdays</p>
+              </div>
+              <div>
+                <p class="text-muted uppercase tracking-wide text-xs mb-1">Focus Areas</p>
+                <p class="font-semibold">React/Next.js builds, dashboard tooling, platform engineering pilots</p>
+              </div>
+              <div>
+                <p class="text-muted uppercase tracking-wide text-xs mb-1">Current Bandwidth</p>
+                <p class="font-semibold">Accepting new engagements for Q2</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-delay-1 h-full">
+            <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-6">
+              <div>
+                <label class="font-semibold block mb-2" for="name">Name</label>
+                <input id="name" type="text" name="name" class="input-field" required />
+              </div>
+              <div>
+                <label class="font-semibold block mb-2" for="email">Email</label>
+                <input id="email" type="email" name="email" class="input-field" required />
+              </div>
+              <div>
+                <label class="font-semibold block mb-2" for="message">Message</label>
+                <textarea id="message" name="message" rows="5" class="input-field" required></textarea>
+              </div>
+              <button class="btn-primary w-full py-4 rounded-xl font-semibold text-lg shadow-lg shadow-[rgba(37,99,235,0.25)]">
+                Send Message →
+              </button>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-muted border-t border-theme">
+    <p>© <span id="current-year"></span> S. Dinesh • Built with HTML & Tailwind CSS</p>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

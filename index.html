@@ -2,617 +2,143 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <title>S. Dinesh | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="S. Dinesh - Software Engineer Portfolio. Showcasing projects in AI, IoT, Full-Stack Development, skills, and achievements.">
-  <meta name="keywords" content="S. Dinesh, Dinesh, Software Engineer, AI, IoT, Full-Stack, Web Development, Portfolio, Projects, Skills, Certifications, Resume, Smart India Hackathon">
+  <title>S. Dinesh | Software Engineer Portfolio</title>
+  <meta name="description" content="S. Dinesh - Software Engineer with expertise in full-stack development, IoT, embedded systems, and AI/ML. Explore my portfolio across multiple roles.">
+  <meta name="keywords" content="S. Dinesh, Software Engineer, Full-Stack Developer, IoT Specialist, Portfolio, Backend, Frontend, React, Node.js">
   <meta name="author" content="S. Dinesh">
-  <meta property="og:title" content="S. Dinesh | Software Engineer" />
-  <meta property="og:description" content="Software Engineer building full-stack and enterprise web applications." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dinesh2841.github.io" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="S. Dinesh | Software Engineer Portfolio">
+  <meta property="og:description" content="Software Engineer with expertise in full-stack development, IoT, and AI/ML.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dinesh2841.github.io/">
+  <meta property="og:image" content="https://dinesh2841.github.io/assets/images/profile.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Load Tailwind CDN first -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Configure Tailwind AFTER loading -->
-  <script>
-    tailwindcss.config = { darkMode: 'class' };
-  </script>
-  <!-- Apply initial theme early to avoid flash -->
+  <link rel="stylesheet" href="assets/styles.css">
   <script>
     (function applyInitialTheme() {
-      try {
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || (!stored && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      } catch (e) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.classList.add('dark');
-        }
-      }
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
-    body {
-      background-color: #ffffff;
-      color: #0f172a;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    html.dark body {
-      background-color: #0b1220;
-      color: #e5e7eb;
-    }
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background-color: #e5e7eb;
-      border-radius: 9999px;
-    }
-    html.dark ::-webkit-scrollbar-track {
-      background-color: #1f2937;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: #3b82f6;
-      border-radius: 9999px;
-    }
-    html.dark ::-webkit-scrollbar-thumb {
-      background-color: #1d4ed8;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #2563eb;
-    }
-    html.dark ::-webkit-scrollbar-thumb:hover {
-      background-color: #1e40af;
-    }
-    /* Implement scrollbar-hide utility */
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-    
-    /* Typing effect cursor animation */
-    .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.25em;
-      background-color: currentColor;
-      margin-left: 2px;
-      animation: blink 1s infinite;
-    }
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-  </style>
+  <script defer src="assets/theme.js"></script>
 </head>
 
-<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-gray-100">
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 py-3 transition-colors duration-300">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="#about" class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">S. Dinesh</a>
-      
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6">
-        <a href="#about" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">About</a>
-        <a href="#internship" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Experience</a>
-        <a href="#featured" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Featured Projects</a>
-        <a href="#projects" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">More Projects</a>
-        <a href="#skills" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Skills</a>
-        <a href="#education" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Education</a>
-        <a href="#achievements" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Achievements</a>
-        <a href="#certifications" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Certifications</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">Contact</a>
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <a href="/" class="text-2xl font-bold tracking-tight text-[var(--text)]">S. Dinesh</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#sde" class="nav-link" data-nav-link>SDE</a>
+        <a href="#full-stack" class="nav-link" data-nav-link>Full-Stack</a>
+        <a href="#iot" class="nav-link" data-nav-link>IoT</a>
+        <a href="#resume" class="nav-link" data-nav-link>Resume</a>
       </nav>
-      
-      <!-- Desktop Theme Toggle -->
-      <button id="theme-toggle-desktop" class="hidden md:flex items-center justify-center p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200" aria-label="Toggle theme">
-        <!-- Moon icon (shown in light mode) -->
-        <i class="fas fa-moon text-lg dark:hidden"></i>
-        <!-- Sun icon (shown in dark mode) -->
-        <i class="fas fa-sun text-lg hidden dark:inline"></i>
-      </button>
-      
-      <!-- Mobile Menu Button & Theme Toggle -->
-      <div class="md:hidden flex items-center space-x-4">
-        <!-- Mobile Theme Toggle -->
-        <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200" aria-label="Toggle theme">
-          <!-- Moon icon (shown in light mode) -->
-          <i class="fas fa-moon text-lg dark:hidden"></i>
-          <!-- Sun icon (shown in dark mode) -->
-          <i class="fas fa-sun text-lg hidden dark:inline"></i>
-        </button>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-button" class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-      </div>
-    </div>
-    
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur z-40 flex flex-col items-center justify-center space-y-6 text-2xl pt-16">
-      <!-- Close Button -->
-      <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 text-gray-50 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200" aria-label="Close menu">
-        <i class="fas fa-times text-3xl"></i>
-      </button>
-      
-      <!-- Mobile Navigation Links -->
-      <a href="#about" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">About</a>
-      <a href="#internship" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Experience</a>
-      <a href="#featured" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Featured Projects</a>
-      <a href="#projects" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">More Projects</a>
-      <a href="#skills" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Skills</a>
-      <a href="#education" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Education</a>
-      <a href="#achievements" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Achievements</a>
-      <a href="#certifications" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Certifications</a>
-      <a href="#contact" class="text-gray-50 hover:text-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition flex items-center justify-center gap-2"></button>
     </div>
   </header>
 
   <main>
-    <!-- Hero / About Section -->
-    <section id="about" class="min-h-[80vh] flex items-center justify-center py-20 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div class="max-w-4xl mx-auto text-center">
-        <img src="assets/images/profile.webp" alt="S. Dinesh" class="w-40 h-40 rounded-full mx-auto mb-8 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 object-cover" loading="lazy" />
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-3">
-          Hello, I'm <span class="text-blue-600 dark:text-blue-400">S. Dinesh</span>
-        </h1>
-        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-6 h-8">
-          An <span id="typing-effect" class="font-semibold text-blue-700 dark:text-blue-300"></span><span class="cursor text-blue-700 dark:text-blue-300"></span>
-        </p>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          I'm a software engineer who builds production-ready systems. I've shipped an enterprise workflow application at Hitachi Energy, working across frontend, backend, and databases, with a strong focus on clean architecture and reliability.
-        </p>
-        <div class="mt-6 text-slate-600 dark:text-slate-300">
-          <span class="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Actively seeking 2026 off-campus roles & internships</span>
-        </div>
-        
-        <!-- Primary CTA: Get in Touch -->
-        <div class="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-3">
-          <a href="#contact" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-white font-semibold py-3 px-8 rounded-md shadow-sm transition-colors duration-200">
-            Get in Touch
-          </a>
-          <a href="S_Dinesh_Resume.pdf" download aria-label="Download Resume PDF" class="inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 text-slate-800 dark:text-slate-200 font-semibold py-3 px-8 rounded-md shadow-sm transition-colors duration-200">
-            Download Resume <i class="fas fa-download ml-2"></i>
-          </a>
-        </div>
-        
-        <!-- Social Links -->
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition-colors duration-200">
-            <i class="fab fa-linkedin"></i>LinkedIn
-          </a>
-          <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition-colors duration-200">
-            <i class="fab fa-github"></i>GitHub
-          </a>
-          <a href="mailto:sevennidinesh@gmail.com" aria-label="Send Email" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition-colors duration-200">
-            <i class="fas fa-envelope"></i>Email
-          </a>
-        </div>
-        
-        <!-- Key Highlights -->
-        <ul class="mt-8 text-gray-600 dark:text-gray-400 space-y-2 max-w-2xl mx-auto">
-          <li>• Built enterprise workflow system during Hitachi Energy internship</li>
-          <li>• Strong in React, Next.js, Node.js, MSSQL, ESP32-based IoT</li>
-          <li>• Comfortable owning features end-to-end</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Internship Section -->
-    <section id="internship" class="py-16 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Experience</h2>
-        <div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow border border-slate-200 dark:border-slate-800">
-          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">Hitachi Energy — Software Engineering Intern</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Aug 2025 – Nov 2025</p>
-          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Built an enterprise Travel Request Management System using Next.js, Express.js, and MSSQL</li>
-            <li>Integrated Microsoft SSO for secure auto-login using company email credentials</li>
-            <li>Designed role-based workflows for employees and managers with approval states</li>
-            <li>Implemented draft/save/submit functionality with separate database handling</li>
-            <li>Automated email notifications for submission and approval events</li>
-            <li>Developed a Manager Dashboard to track request status (Pending / Approved / Rejected)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="featured" class="py-16 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
-      <div class="container mx-auto max-w-6xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl">
-            <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">Enterprise Travel Request System</h3>
-            <p class="text-sm text-gray-500 mb-2">Next.js • Express • MSSQL • Microsoft SSO</p>
-            <p class="text-gray-700 dark:text-gray-300">
-              Built a production-grade internal tool used for managing employee travel approvals.
-              Features included role-based access, multi-employee requests, draft saving,
-              automated emails, and approval dashboards.
-            </p>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 underline">GitHub</a>
-            </div>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl">
-            <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">IoT Monitoring System (ESP32)</h3>
-            <p class="text-sm text-gray-500 mb-2">ESP32 • MQTT • Raspberry Pi • Dashboard</p>
-            <p class="text-gray-700 dark:text-gray-300">
-              Designed an IoT stack with sensor ingestion on ESP32, MQTT transport,
-              edge processing on Raspberry Pi, and a web dashboard for realtime monitoring.
-            </p>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 underline">GitHub</a>
-            </div>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl">
-            <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">Oral Abnormality Detection</h3>
-            <p class="text-sm text-gray-500 mb-2">Python • TensorFlow • DenseNet201</p>
-            <p class="text-gray-700 dark:text-gray-300">
-              Implemented an ML pipeline improving detection accuracy using DenseNet201 and AO,
-              with training, evaluation, and reproducible notebooks.
-            </p>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 underline">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div class="container mx-auto max-w-6xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">More Projects from GitHub</h2>
-        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Projects will be loaded via JavaScript -->
-          <div class="col-span-full text-center text-gray-600 dark:text-gray-400">
-            <i class="fas fa-spinner fa-spin text-4xl mb-4 text-blue-500"></i>
-            <p>Loading projects from GitHub...</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
-      <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div class="order-3 bg-white dark:bg-slate-900 p-6 rounded-xl shadow border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
-            <i class="fas fa-code text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Languages & Types</h3>
-            <ul class="text-gray-600 dark:text-gray-400 text-sm">
-              <li>TypeScript</li><li>JavaScript</li><li>Python</li><li>Java</li><li>C/C++</li><li>SQL</li>
-            </ul>
-          </div>
-          <div class="order-1 bg-white dark:bg-slate-900 p-6 rounded-xl shadow border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
-            <i class="fas fa-globe text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Web Development</h3>
-            <ul class="text-gray-600 dark:text-gray-400 text-sm">
-              <li>React.js</li><li>Next.js</li><li>Node.js</li><li>Express.js</li><li>Tailwind CSS</li>
-            </ul>
-          </div>
-          <div class="order-2 bg-white dark:bg-slate-900 p-6 rounded-xl shadow border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
-            <i class="fas fa-database text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Databases & Cloud</h3>
-            <ul class="text-gray-600 dark:text-gray-400 text-sm">
-              <li>MSSQL</li><li>MongoDB</li><li>Firebase</li><li>Azure</li><li>AWS IoT</li>
-            </ul>
-          </div>
-          <div class="order-5 bg-white dark:bg-slate-900 p-6 rounded-xl shadow border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
-            <i class="fas fa-microchip text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Embedded & IoT</h3>
-            <ul class="text-gray-600 dark:text-gray-400 text-sm">
-              <li>Arduino</li><li>Raspberry Pi</li><li>ESP32/ESP8266</li><li>RTOS</li>
-            </ul>
-          </div>
-          <div class="order-6 bg-white dark:bg-slate-900 p-6 rounded-xl shadow border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
-            <i class="fas fa-brain text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">AI/ML</h3>
-            <ul class="text-gray-600 dark:text-gray-400 text-sm">
-              <li>Scikit-learn</li><li>TensorFlow</li><li>Keras</li><li>Data Analysis</li>
-            </ul>
-          </div>
-          <div class="order-4 bg-white dark:bg-slate-900 p-6 rounded-xl shadow border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
-            <i class="fas fa-tools text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tools & Platforms</h3>
-            <ul class="text-gray-600 dark:text-gray-400 text-sm">
-              <li>Git/GitHub</li><li>VS Code</li><li>Docker</li><li>Postman</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-16 px-4 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
-      <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Education</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600">
-            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">BE. Electronics and Communication Engineering</h3>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">SIMATS University, Chennai</p>
-            <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022 - 2026</p>
-            <p class="text-gray-600 dark:text-gray-400">
-              Focused on embedded systems, digital signal processing, communication networks, and software development.
-            </p>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600">
-            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Higher Secondary Certificate</h3>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya Jr College, Tirupati</p>
-            <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2022</p>
-            <p class="text-gray-600 dark:text-gray-400">
-              Completed higher secondary education with a focus on Mathematics, Physics, and Chemistry.
-            </p>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600">
-            <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Secondary School Certificate</h3>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-1">Sri Chaitanya School, Tirupati</p>
-            <p class="text-md text-gray-500 dark:text-gray-400 mb-4">2020</p>
-            <p class="text-gray-600 dark:text-gray-400">
-              Successfully completed secondary school education, developing a strong academic foundation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="py-16 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Certifications</h2>
-        <div class="space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg shadow-xl border border-blue-500/60 dark:border-blue-500/60">
-              <img src="https://placehold.co/300x200/ADD8E6/000000?text=Oracle+AI" alt="Oracle AI" class="w-full h-40 object-cover rounded-md mb-4 shadow-md" loading="lazy">
-              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Oracle Cloud Infrastructure AI Foundations</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Issued by Oracle</p>
-              <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CAB88AFECDE920D3C82D15E2B788CBFEDE93CD1A72AC9AE160F8E317725E22B9" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-            </div>
-            <div class="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg shadow-xl border border-blue-500/60 dark:border-blue-500/60">
-              <img src="https://placehold.co/300x200/ADD8E6/000000?text=IoT+NPTEL" alt="IoT NPTEL" class="w-full h-40 object-cover rounded-md mb-4 shadow-md" loading="lazy">
-              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Internet of Things</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Issued by NPTEL</p>
-              <a href="https://internalapp.nptel.ac.in/NOC/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S44850127604354562.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-            </div>
-            <div class="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg shadow-xl border border-blue-500/60 dark:border-blue-500/60">
-              <img src="https://placehold.co/300x200/ADD8E6/000000?text=Java+NPTEL" alt="Programming in Java" class="w-full h-40 object-cover rounded-md mb-4 shadow-md" loading="lazy">
-              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Programming in Java</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Issued by NPTEL</p>
-              <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs105/Course/NPTEL24CS105S55080183004004004.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-            </div>
-          </div>
-
-          <details class="bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 opacity-75">
-            <summary class="cursor-pointer px-6 py-4 text-gray-600 dark:text-gray-400 font-medium text-sm">Additional Certifications</summary>
-            <div class="px-6 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Python for Data Science (NPTEL)</h3>
-                <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs54/Course/NPTEL24CS54S65410050330066931.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">The Joy of Computing Using Python (NPTEL)</h3>
-                <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs20/Course/NPTEL23CS20S2334370204107181.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Python Fundamentals for Beginners (Great Learning)</h3>
-                <a href="https://www.mygreatlearning.com/certificate/UCGVIONM" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Front End Development - HTML (Great Learning)</h3>
-                <a href="https://www.mygreatlearning.com/certificate/JCVTZKKT" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Python for Non-Programmers (Great Learning)</h3>
-                <a href="https://www.mygreatlearning.com/certificate/YKGYZBIT" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Java for Beginners (Udemy)</h3>
-                <a href="https://www.udemy.com/certificate/UC-f0482cb6-c7cf-4b21-b63e-114e9ebbc7ef/" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-              <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Interactive Quiz Game (SkillEcted)</h3>
-                <a href="https://skillected.graphy.com/share-certificate?serialno=QORVIMP1" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-xs underline hover:text-blue-600">Verify</a>
-              </div>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="py-16 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
-      <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Achievements</h2>
-        <div class="space-y-8">
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
-            <i class="fas fa-star text-4xl text-yellow-500 dark:text-yellow-400 flex-shrink-0 mt-1"></i>
-            <div>
-              <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">NPTEL Discipline Star (2025)</h3>
-              <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">NPTEL (IIT Madras)</p>
-              <p class="text-gray-600 dark:text-gray-400">
-                Awarded by NPTEL (IIT Madras) for consistent top performance across multiple NPTEL courses within a discipline.
-              </p>
-            </div>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
-            <i class="fas fa-award text-4xl text-green-500 dark:text-green-400 flex-shrink-0 mt-1"></i>
-            <div>
-              <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Best Poster Award - University Level</h3>
-              <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">SIMATS University</p>
-              <p class="text-gray-600 dark:text-gray-400">
-                Selected as best among ~50+ projects for the final year research: "Improving Accuracy During Oral Abnormality Detection with DenseNet201 and AO Compared to MobileNetV3".
-              </p>
-            </div>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
-            <i class="fas fa-microscope text-4xl text-red-500 dark:text-red-400 flex-shrink-0 mt-1"></i>
-            <div>
-              <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">National Conference Awardee</h3>
-              <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">Balaji Medical College</p>
-              <p class="text-gray-600 dark:text-gray-400">
-                Peer-reviewed paper presented at a national-level conference; recognized for impactful innovation in tech-driven healthcare solutions.
-              </p>
-            </div>
-          </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-600 flex items-start space-x-6">
-            <i class="fas fa-code-branch text-4xl text-indigo-500 dark:text-indigo-400 flex-shrink-0 mt-1"></i>
-            <div>
-              <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Hackathon & Expo Participation</h3>
-              <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">Multiple Institutions</p>
-              <p class="text-gray-600 dark:text-gray-400">
-                Built 3+ working prototypes across IoT and web domains; participated in inter-college hackathons and tech expos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div class="container mx-auto max-w-2xl">
-        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Contact</h2>
-        <div class="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-          <p class="text-center text-gray-700 dark:text-gray-300">
-            📍 Chennai, India <br>
-            🎯 Open to Internships & Full-Time Roles (2026)
+    <section class="hero-shell hero-spotlight">
+      <div class="section-inner">
+        <div class="text-center">
+          <img src="assets/images/profile.webp" alt="S. Dinesh" class="reveal w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-6 shadow ring-1 ring-[var(--border)] object-cover" loading="lazy" decoding="async" />
+          <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl font-bold text-center mb-3 text-[var(--text)]">
+            Hi, I'm <span class="text-[var(--button-bg)]">S. Dinesh</span>
+          </h1>
+          <p class="reveal reveal-delay-2 text-lg text-center max-w-2xl mx-auto mb-6 text-[var(--text-light)]">
+            A <span id="typing-effect" class="font-semibold text-[var(--button-bg)]"></span><span class="cursor text-[var(--button-bg)]"></span>
+            <br />
+            with expertise across full-stack development, embedded systems, and AI/ML.
           </p>
-          <div class="h-4"></div>
-          <p class="text-center text-gray-700 dark:text-gray-300 mb-6">
-            Have a question or want to collaborate? Feel free to reach out!
-          </p>
-          <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-6 text-left">
-            <div>
-              <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" />
-            </div>
-            <div>
-              <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Email</label>
-              <input type="email" id="email" name="email" placeholder="your.email@example.com" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" />
-            </div>
-            <div>
-              <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-semibold mb-2">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"></textarea>
-            </div>
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              Send Message <i class="fas fa-paper-plane ml-2"></i>
-            </button>
-          </form>
-          <div class="mt-8 text-center">
-            <p class="text-gray-700 dark:text-gray-300 text-lg font-semibold mb-4">Or find me on:</p>
-            <div class="flex justify-center space-x-6 text-3xl">
-              <a href="https://linkedin.com/in/sevinnidinesh" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500 transition-colors duration-200" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="mailto:sevennidinesh@gmail.com" class="text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors duration-200" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
+          
+          <!-- Role Selector Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            <!-- SDE Role Card -->
+            <a id="sde" href="sde/" aria-label="Software Development Engineer portfolio" class="card-premium group reveal reveal-delay-1 scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[var(--button-bg)]">
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">SDE</h2>
+                <p class="text-[var(--text-light)]">
+                  Full-stack development, backend systems, databases
+                </p>
+              </div>
+            </a>
+            
+            <!-- Full-Stack Role Card -->
+            <a id="full-stack" href="full-stack/" aria-label="Full-Stack developer portfolio" class="card-premium group reveal reveal-delay-2 scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[#16a34a]">
+                  <i class="fas fa-layer-group" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">Full-Stack</h2>
+                <p class="text-[var(--text-light)]">
+                  Frontend + Backend, React, Next.js, Node.js
+                </p>
+              </div>
+            </a>
+            
+            <!-- IoT Role Card -->
+            <a id="iot" href="iot/" aria-label="IoT engineer portfolio" class="card-premium group reveal reveal-delay-3 scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[#9333ea]">
+                  <i class="fas fa-microchip" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">IoT</h2>
+                <p class="text-[var(--text-light)]">
+                  ESP32, Arduino, embedded systems, MQTT
+                </p>
+              </div>
+            </a>
+            
+            <!-- Resume Card -->
+            <a id="resume" href="resume/" aria-label="Download resume" class="card-premium group reveal scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[#ea580c]">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">Resume</h2>
+                <p class="text-[var(--text-light)]">
+                  Download & review my resume
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="flex justify-center gap-4 mt-6 flex-wrap">
+            <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile (opens in new tab)" class="link-pill reveal">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
+            </a>
+            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile (opens in new tab)" class="link-pill reveal reveal-delay-1">
+              <i class="fab fa-github" aria-hidden="true"></i>GitHub
+            </a>
+            <a href="mailto:sevennidinesh@gmail.com" aria-label="Send email to sevennidinesh@gmail.com" class="link-pill reveal reveal-delay-2">
+              <i class="fas fa-envelope" aria-hidden="true"></i>Email
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-slate-900 text-slate-400 py-8 text-center border-t border-slate-800">
-    <div class="container mx-auto px-4">
-      <p class="text-sm text-gray-500">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
-      <p>&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
+  <footer class="py-8 px-4 text-center border-t transition-colors duration-300 bg-[var(--bg)] border-[var(--border)]">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-[var(--text-light)]">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
+      <p class="text-[var(--text-light)]">&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Inline JavaScript for core functionality -->
   <script>
-    // ========================================
-    // 1. DARK/LIGHT THEME TOGGLE
-    // ========================================
-    (function setupThemeToggle() {
-      const desktopToggle = document.getElementById('theme-toggle-desktop');
-      const mobileToggle = document.getElementById('theme-toggle-mobile');
-
-      function toggleTheme() {
-        const html = document.documentElement;
-        const isDark = html.classList.contains('dark');
-        
-        if (isDark) {
-          html.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
-        } else {
-          html.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
-        }
-      }
-
-      if (desktopToggle) desktopToggle.addEventListener('click', toggleTheme);
-      if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
-    })();
-
-    // ========================================
-    // 2. MOBILE MENU TOGGLE & ACCESSIBILITY
-    // ========================================
-    (function setupMobileMenu() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const closeMenuButton = document.getElementById('close-mobile-menu');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-
-      function toggleMenu(show) {
-        if (show === undefined) {
-          show = mobileMenu.classList.contains('hidden');
-        }
-        
-        if (show) {
-          mobileMenu.classList.remove('hidden');
-          mobileMenuButton.setAttribute('aria-expanded', 'true');
-          // Focus first link
-          if (mobileLinks.length > 0) {
-            mobileLinks[0].focus();
-          }
-        } else {
-          mobileMenu.classList.add('hidden');
-          mobileMenuButton.setAttribute('aria-expanded', 'false');
-          // Return focus to menu button
-          mobileMenuButton.focus();
-        }
-      }
-
-      // Open/close menu
-      mobileMenuButton.addEventListener('click', () => toggleMenu());
-      closeMenuButton.addEventListener('click', () => toggleMenu(false));
-
-      // Close menu when a link is clicked
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => toggleMenu(false));
-      });
-
-      // Close menu with Escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-          toggleMenu(false);
-        }
-      });
-    })();
-
-    // ========================================
-    // 3. TYPING EFFECT FOR HERO SUBTITLE
-    // ========================================
+    // Typing Effect
     (function setupTypingEffect() {
       const typingElement = document.getElementById('typing-effect');
-      const roles = [
-        'Software Engineer',
-        'Full-Stack Developer',
-        'IoT Enthusiast',
-        'AI/ML Practitioner'
-      ];
+      const roles = ['Software Engineer', 'Full-Stack Developer', 'IoT Specialist'];
 
       let roleIndex = 0;
       let charIndex = 0;
@@ -625,24 +151,20 @@
         const currentRole = roles[roleIndex];
         
         if (!isDeleting) {
-          // Typing forward
           if (charIndex < currentRole.length) {
             typingElement.textContent += currentRole.charAt(charIndex);
             charIndex++;
             setTimeout(type, typingSpeed);
           } else {
-            // Finished typing, pause before deleting
             isDeleting = true;
             setTimeout(type, pauseBetweenRoles);
           }
         } else {
-          // Deleting backward
           if (charIndex > 0) {
             typingElement.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
             setTimeout(type, deletingSpeed);
           } else {
-            // Finished deleting, move to next role
             isDeleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
             setTimeout(type, 500);
@@ -650,69 +172,7 @@
         }
       }
 
-      // Start typing effect
       type();
-    })();
-
-    // ========================================
-    // 4. POPULATE CURRENT YEAR IN FOOTER
-    // ========================================
-    (function setupFooterYear() {
-      const yearElement = document.getElementById('current-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    })();
-
-    // ========================================
-    // 5. FETCH GITHUB PROJECTS
-    // ========================================
-    (function fetchGitHubProjects() {
-      const container = document.getElementById('projects-container');
-      const username = 'dinesh2841';
-
-      async function loadProjects() {
-        try {
-          const response = await fetch(`https://api.github.com/users/dinesh2841/repos?sort=stars&per_page=100`);
-          if (!response.ok) throw new Error('Failed to fetch repositories');
-          
-          const repos = await response.json();
-          
-          // Filter out forks and exclude practice/assignment repos
-          const filteredRepos = repos.filter(repo => {
-            if (!repo || !repo.name) return false;
-            const name = repo.name.toLowerCase();
-            return !repo.fork && !name.includes('assignment') && !name.includes('calculator') && !name.includes('practice');
-          });
-          
-          if (filteredRepos.length === 0) {
-            container.innerHTML = '<p class="col-span-full text-center text-gray-600 dark:text-gray-400">No public repositories found.</p>';
-            return;
-          }
-
-          container.innerHTML = filteredRepos
-            .slice(0, 9)// Limit to 9 projects
-            .map(repo => `
-              <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl">
-                <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2">
-                  <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">${repo.name}</a>
-                </h3>
-                <p class="text-sm text-gray-500 mb-2">${repo.language || 'Unknown'}</p>
-                <p class="text-gray-700 dark:text-gray-300 line-clamp-3">${repo.description || 'No description'}</p>
-                <div class="mt-4 flex gap-4">
-                  <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 underline">View on GitHub</a>
-                  ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 underline">Live Demo</a>` : ''}
-                </div>
-              </div>
-            `)
-            .join('');
-        } catch (error) {
-          container.innerHTML = `<p class="col-span-full text-center text-gray-600 dark:text-gray-400">Unable to load projects. <a href="https://github.com/${username}" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">Visit GitHub profile</a></p>`;
-        }
-      }
-
-      // Load projects when page is ready
-      loadProjects();
     })();
   </script>
 </body>
