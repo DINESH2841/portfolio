@@ -1,510 +1,242 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>S. Dinesh | IoT Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="S. Dinesh - IoT Engineer Portfolio. ESP32, Arduino, MQTT, embedded systems, sensor networks.">
-  <meta name="keywords" content="S. Dinesh, IoT, Embedded Systems, ESP32, Arduino, MQTT, Raspberry Pi, Portfolio">
-  <meta name="author" content="S. Dinesh">
-  <meta property="og:title" content="S. Dinesh | IoT Engineer" />
-  <meta property="og:description" content="Embedded systems and IoT specialist." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dinesh2841.github.io/iot/" />
-  <meta property="og:image" content="https://dinesh2841.github.io/assets/images/profile.webp" />
-  <meta name="robots" content="index, follow" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S. Dinesh | IoT & Embedded Systems Engineer</title>
+  <meta name="description" content="IoT & Embedded Systems Portfolio - ESP32, MQTT, automation platforms, and real-time telemetry dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
   <script>
     (function applyInitialTheme() {
-      const root = document.documentElement;
       const savedTheme = localStorage.getItem('theme') || 'light';
-      root.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --text-light: #334155;
-      --border: #e5e7eb;
-      --button-bg: #1e40af;
-      --button-text: #ffffff;
-    }
-
-    /* Dark mode */
-    html[data-theme="dark"] {
-      --bg: #0b1220;
-      --text: #e5e7eb;
-      --text-light: #94a3b8;
-      --border: #1e293b;
-      --button-bg: #3b82f6;
-      --button-text: #ffffff;
-    }
-
-    /* Pure Black */
-    html[data-theme="black"] {
-      --bg: #000000;
-      --text: #ffffff;
-      --text-light: #d1d5db;
-      --border: #222222;
-      --button-bg: #2563eb;
-      --button-text: #ffffff;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    button, .btn {
-      background: var(--button-bg) !important;
-      color: var(--button-text) !important;
-      border-color: var(--border) !important;
-    }
-
-    p, li {
-      color: var(--text-light);
-    }
-
-    a {
-      color: var(--button-bg);
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--text);
-    }
-
-    body, header, section, footer, main, button {
-      transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
-
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background-color: var(--border);
-      border-radius: 9999px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--button-bg);
-      border-radius: 9999px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: var(--button-bg);
-      opacity: 0.8;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.25em;
-      background-color: currentColor;
-      margin-left: 2px;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-
-    /* Border colors */
-    .border {
-      border-color: var(--border) !important;
-    }
-
-    /* Input styling */
-    input, textarea {
-      background: var(--bg) !important;
-      color: var(--text) !important;
-      border-color: var(--border) !important;
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: var(--text-light);
-      opacity: 0.7;
-    }
-
-    /* Focus states */
-    input:focus, textarea:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px var(--button-bg);
-    }
-
-    /* Label colors */
-    label {
-      color: var(--text);
-    }
-  </style>
+  <script defer src="../assets/theme.js"></script>
 </head>
 
-<body style="background: var(--bg); color: var(--text);">
-  <header class="sticky top-0 z-50 border-b py-3 transition-colors duration-300" style="background: var(--bg); border-color: var(--border);">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold tracking-tight" style="color: var(--text);">S. Dinesh</a>
-      <span class="text-sm font-semibold" style="color: var(--button-bg);">IoT</span>
-      
-      <div class="flex items-center space-x-4">
-        <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition" style="background: var(--button-bg); border-color: var(--border);">
-          <span id="icon-light" style="display:inline; font-size:1.25rem;" aria-hidden="true">☀️</span>
-          <span id="icon-dark" style="display:none; font-size:1.25rem;" aria-hidden="true">🌙</span>
-          <span id="icon-black" style="display:none; font-size:1.25rem;" aria-hidden="true">⚫</span>
-        </button>
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <a href="/" class="text-2xl font-bold tracking-tight text-[var(--text)]">S. Dinesh</a>
+        <span class="text-sm font-semibold text-[var(--button-bg)]">IoT</span>
       </div>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#projects" class="nav-link" data-nav-link>Projects</a>
+        <a href="#skills" class="nav-link" data-nav-link>Skills</a>
+        <a href="#certifications" class="nav-link" data-nav-link>Certifications</a>
+        <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition flex items-center justify-center gap-2"></button>
     </div>
   </header>
 
-  <main class="pt-24 pb-32 space-y-32">
-    <section id="about" class="min-h-screen flex flex-col items-center justify-center px-4 transition-colors duration-300" style="background: var(--bg);">
-      <div class="max-w-3xl mx-auto text-center">
-        <img src="../assets/images/profile.webp" alt="S. Dinesh" class="w-40 h-40 rounded-full mx-auto mb-8 shadow ring-1 object-cover" style="outline-color: var(--border);" loading="lazy" decoding="async" />
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3" style="color: var(--text);">
-          Hi, I'm <span style="color: var(--button-bg);">S. Dinesh</span>
+  <main>
+    <section class="hero-shell hero-spotlight">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.35em] text-[var(--text-light)] mb-6">IoT & Embedded Systems</p>
+        <img src="../assets/images/profile.webp" alt="Portrait of S. Dinesh" class="reveal reveal-delay-1 w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-8 shadow-xl object-cover border border-[var(--border)]" />
+        <h1 class="reveal reveal-delay-2 text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+          Connected systems crafted with <span class="text-[var(--button-bg)]">precision</span>
         </h1>
-        <p class="text-lg md:text-xl mb-4 leading-tight" style="color: var(--text-light);">
-          A <span id="typing-effect" class="font-semibold" style="color: var(--button-bg);"></span><span class="cursor" style="color: var(--button-bg);"></span>
+        <p class="reveal reveal-delay-3 text-lg md:text-xl max-w-3xl mx-auto text-[var(--text-light)]">
+          I build resilient embedded products across ESP32, STM32, and Raspberry Pi, layering secure MQTT, OTA updates, and real-time telemetry dashboards for industrial and consumer environments.
         </p>
-        <p class="max-w-2xl mx-auto mb-4" style="color: var(--text-light);">
-          IoT engineer designing embedded systems and smart devices. I work with ESP32, Arduino, and MQTT protocols to create connected solutions.
-        </p>
-        <div class="mt-6">
-          <span class="inline-block px-3 py-1 rounded-full text-sm" style="background: var(--border); color: var(--text-light);">Expert in hardware-software integration</span>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <a href="../Sevenni Dinesh Resume.pdf" download class="btn-primary">Download Resume</a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
         </div>
-        
-        <div class="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-3">
-          <a href="#contact" aria-label="Get in touch - scroll to contact form" class="inline-flex items-center justify-center font-semibold py-3 px-8 rounded-md shadow-sm transition-colors duration-200" style="background: var(--button-bg); color: var(--button-text);">
-            Get in Touch
-          </a>
-          <a href="../Sevenni Dinesh Resume.pdf" download aria-label="Download Resume PDF" class="inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 font-semibold py-3 px-8 rounded-md shadow-sm transition-colors duration-200" style="background: var(--bg); border: 1px solid var(--border); color: var(--text);">
-            Download Resume <i class="fas fa-download ml-2"></i>
-          </a>
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+          <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" class="link-pill"><i class="fab fa-linkedin"></i>LinkedIn</a>
+          <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="link-pill"><i class="fab fa-github"></i>GitHub</a>
+          <a href="mailto:sevennidinesh@gmail.com" class="link-pill"><i class="fas fa-envelope"></i>Email</a>
         </div>
-        
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile (opens in new tab)" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200" style="background: var(--border); color: var(--text);">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
-          </a>
-          <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile (opens in new tab)" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200" style="background: var(--border); color: var(--text);">
-            <i class="fab fa-github" aria-hidden="true"></i>GitHub
-          </a>
-          <a href="mailto:sevennidinesh@gmail.com" aria-label="Send email to sevennidinesh@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200" style="background: var(--border); color: var(--text);">
-            <i class="fas fa-envelope" aria-hidden="true"></i>Email
-          </a>
-        </div>
-        
-        <ul class="mt-8 space-y-2 max-w-2xl mx-auto" style="color: var(--text-light);">
-          <li>• IoT monitoring system: ESP32 sensors → MQTT → Dashboard</li>
-          <li>• Embedded programming: C, Arduino IDE, PlatformIO, FreeRTOS</li>
-          <li>• Wireless protocols: WiFi, Bluetooth, MQTT, LoRaWAN</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="featured" class="px-4 transition-colors duration-300" style="background: var(--bg);">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="p-6 rounded-lg shadow-xl" style="background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="text-2xl font-semibold" style="color: var(--text);">IoT Monitoring System</h3>
-            <p class="text-sm mb-2" style="color: var(--text-light);">ESP32 • MQTT • Raspberry Pi • Node.js</p>
-            <p style="color: var(--text-light);">
-              Complete sensor network: temperature, humidity sensors on ESP32, MQTT broker on Raspberry Pi, real-time web dashboard with historical data logging.
-            </p>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View IoT Monitoring System on GitHub (opens in new tab)" style="color: var(--button-bg);" class="underline">GitHub</a>
-            </div>
-          </div>
-          <div class="p-6 rounded-lg shadow-xl" style="background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="text-2xl font-semibold" style="color: var(--text);">Home Automation Hub</h3>
-            <p class="text-sm mb-2" style="color: var(--text-light);">Arduino • Relay Control • REST API</p>
-            <p style="color: var(--text-light);">
-              Smart home controller with Arduino-based relay matrix, HTTP API for remote control, support for lights, fans, door locks with scheduled automation.
-            </p>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View Home Automation Hub on GitHub (opens in new tab)" style="color: var(--button-bg);" class="underline">GitHub</a>
-            </div>
-          </div>
-          <div class="p-6 rounded-lg shadow-xl" style="background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="text-2xl font-semibold" style="color: var(--text);">Environmental Logger</h3>
-            <p class="text-sm mb-2" style="color: var(--text-light);">ESP32 • SD Card • Sensors</p>
-            <p style="color: var(--text-light);">
-              Portable data logger with multiple sensors (temp, humidity, pressure, light), SD card storage, low-power operation, data visualization on mobile web app.
-            </p>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="View Environmental Logger on GitHub (opens in new tab)" style="color: var(--button-bg);" class="underline">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="px-4 transition-colors duration-300" style="background: var(--bg);">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
-            <i class="fas fa-microchip text-3xl mb-3" style="color: var(--button-bg);"></i>
-            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Microcontrollers</h3>
-            <p class="text-sm" style="color: var(--text-light);">ESP32, Arduino, STM32</p>
-          </div>
-          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
-            <i class="fas fa-wifi text-3xl mb-3" style="color: var(--button-bg);"></i>
-            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Wireless</h3>
-            <p class="text-sm" style="color: var(--text-light);">WiFi, BLE, MQTT</p>
-          </div>
-          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
-            <i class="fas fa-code text-3xl mb-3" style="color: var(--button-bg);"></i>
-            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Embedded C</h3>
-            <p class="text-sm" style="color: var(--text-light);">C/C++, FreeRTOS, Arduino IDE</p>
-          </div>
-          <div class="p-6 rounded-xl shadow border text-center" style="background: var(--bg); border-color: var(--border);">
-            <i class="fas fa-tv text-3xl mb-3" style="color: var(--button-bg);"></i>
-            <h3 class="text-xl font-semibold mb-2" style="color: var(--text);">Platforms</h3>
-            <p class="text-sm" style="color: var(--text-light);">Raspberry Pi, AWS IoT</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="px-4 transition-colors duration-300" style="background: var(--bg);">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Certifications & Licenses</h2>
-        <div class="space-y-8">
+        <div class="stats-grid">
           <div>
-            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
-              <i class="fas fa-brain text-3xl mr-3"></i> AI/ML & Cloud
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Artificial Intelligence: Concepts and Techniques</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Nov 2025</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL25CS159S127070087410468544</p>
-                <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs159/Course/NPTEL25CS159S127070087410468544.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">Oracle • Issued Sep 2024 (Expires Sep 2026)</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: dT212591RD92b</p>
-                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CAB88AFECDE920D3C82D15E2B788CBFEDE93CD1A72AC9AE160F8E317725E22B9" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-            </div>
-          </div>
-          <div data-section>
-            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
-              <i class="fas fa-rocket text-3xl mr-3"></i> Hackathons & Challenges
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde,iot" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Google Developer Groups Solution Challenge</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">Google Developer Groups On Campus • Issued Aug 2025</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: 2025H2S01GSC-P20297 • Skills: Firebase</p>
-                <a href="#" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-            </div>
-          </div>
-          <div data-section>
-            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
-              <i class="fas fa-server text-3xl mr-3"></i> Backend & Java
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Java for Beginners</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">Udemy • Issued Jun 2025</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: UC-f0482cb6-c7cf-4b21-b63e-114e9ebbc7ef • Skills: Java</p>
-                <a href="https://www.udemy.com/certificate/UC-f0482cb6-c7cf-4b21-b63e-114e9ebbc7ef/" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Programming in Java</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Oct 2024</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL24CS105S550801830 • Skills: Java</p>
-                <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs105/Course/NPTEL24CS105S55080183004004004.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-            </div>
+            <p class="text-3xl font-bold">25+</p>
+            <p class="text-sm text-[var(--text-light)]">Devices automated end-to-end</p>
           </div>
           <div>
-            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
-              <i class="fas fa-microchip text-3xl mr-3"></i> IoT & Embedded Systems
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="iot" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Internet of Things</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued May 2025</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL25CS44S44850127604354562 • Skills: IoT</p>
-                <a href="https://internalapp.nptel.ac.in/NOC/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S44850127604354562.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-            </div>
+            <p class="text-3xl font-bold">12</p>
+            <p class="text-sm text-[var(--text-light)]">Protocols integrated (WiFi, BLE, LoRa)</p>
           </div>
-          <div data-section>
-            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
-              <i class="fas fa-palette text-3xl mr-3"></i> Web & Frontend
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Build Your First Interactive Quiz Game with HTML & CSS</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">SkillEcted • Issued Nov 2024</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: QORVIMP1 • Skills: HTML, CSS</p>
-                <a href="https://skillected.graphy.com/share-certificate?serialno=QORVIMP1" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Front End Development - HTML</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">Great Learning • Issued Sep 2024</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: JCVTZKKT • Skills: HTML</p>
-                <a href="https://www.mygreatlearning.com/certificate/JCVTZKKT" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-            </div>
-          </div>
-          <div data-section>
-            <h3 class="text-2xl font-semibold mb-6 flex items-center" style="color: var(--button-bg);">
-              <i class="fas fa-python text-3xl mr-3"></i> Python & Foundations
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Python for Data Science</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Apr 2024</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL24CS54S654100503 • Skills: Python</p>
-                <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs54/Course/NPTEL24CS54S65410050330066931.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Python Fundamentals for Beginners</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">Great Learning • Issued Aug 2024</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: UCGVIONM • Skills: Python</p>
-                <a href="https://www.mygreatlearning.com/certificate/UCGVIONM" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">The Joy of Computing Using Python</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">NPTEL • Issued Apr 2023</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: NPTEL23CS20S23343702 • Skills: Python</p>
-                <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs20/Course/NPTEL23CS20S2334370204107181.jpg" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-              <div class="p-6 rounded-lg shadow-xl border hover:shadow-2xl transition-shadow cert-card" data-roles="full-stack,sde" style="background: var(--bg); border-color: var(--border);">
-                <h4 class="text-lg font-semibold mb-2" style="color: var(--text);">Python for Non-Programmers</h4>
-                <p class="text-sm mb-2" style="color: var(--text-light);">Great Learning • Issued Oct 2023</p>
-                <p class="text-xs mb-3" style="color: var(--text-light);">ID: YKGYZBIT • Skills: Python</p>
-                <a href="https://www.mygreatlearning.com/certificate/YKGYZBIT" target="_blank" rel="noopener noreferrer" style="color: var(--button-bg);" class="text-sm font-semibold transition-colors">Verify Credential →</a>
-              </div>
-            </div>
+          <div>
+            <p class="text-3xl font-bold">5</p>
+            <p class="text-sm text-[var(--text-light)]">Production-grade dashboards</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="px-4 transition-colors duration-300" style="background: var(--bg);">
-      <div class="max-w-lg mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--text);">Contact</h2>
-        <div class="p-8 rounded-lg shadow-xl border" style="background: var(--border); border-color: var(--border);">
-          <p class="text-center mb-6" style="color: var(--text-light);">
-            Interested in IoT projects or consulting? Let's discuss hardware solutions.
-          </p>
-          <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-6 text-left">
+    <section class="section-shell scroll-target" id="projects">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Case Studies</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Featured Projects</h2>
+        <div class="project-grid">
+          <article class="card-premium reveal">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Industrial IoT Monitoring</h3>
+                <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">ESP32</span>
+              </div>
+              <p class="text-[var(--text-light)]">Redundant ESP32 nodes stream air-quality, vibration, and thermal data to a Raspberry Pi MQTT broker with live alerting dashboards.</p>
+              <ul class="text-sm text-[var(--text-light)] space-y-2 list-disc list-inside">
+                <li>Secure TLS tunnel with device authentication</li>
+                <li>Edge buffering + automatic retry for outages</li>
+                <li>Grafana UI with 5s refresh cadence</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-[var(--border)] text-sm">
+              <span class="text-[var(--text-light)]">Stack: ESP-IDF · MQTT · Node.js</span>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-[var(--button-bg)] font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card-premium reveal reveal-delay-1">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Home Automation Hub</h3>
+                <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">Automation</span>
+              </div>
+              <p class="text-[var(--text-light)]">Unified control surface for lighting, HVAC, and energy meters with scheduling, presets, and responsive PWA controls.</p>
+              <ul class="text-sm text-[var(--text-light)] space-y-2 list-disc list-inside">
+                <li>REST + MQTT hybrid API for instant + batch updates</li>
+                <li>Role-based access and audit logs</li>
+                <li>OTA firmware updates rolled out in cohorts</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-[var(--border)] text-sm">
+              <span class="text-[var(--text-light)]">Stack: ESPHome · React PWA · FastAPI</span>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-[var(--button-bg)] font-semibold">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card-premium reveal reveal-delay-2">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Environmental Logger</h3>
+                <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">Telemetry</span>
+              </div>
+              <p class="text-[var(--text-light)]">Modular sensor stack records particulate, temperature, and barometric data locally and syncs to the cloud for long-term analytics.</p>
+              <ul class="text-sm text-[var(--text-light)] space-y-2 list-disc list-inside">
+                <li>Dual-write SD + cloud persistence</li>
+                <li>Low-power sampling windows with wake-on-event</li>
+                <li>Companion React Native dashboard</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-[var(--border)] text-sm">
+              <span class="text-[var(--text-light)]">Stack: ESP32 · InfluxDB · React Native</span>
+              <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" class="text-[var(--button-bg)] font-semibold">GitHub →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="skills">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Technical Range</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Skills</h2>
+        <div class="skills-grid">
+          <article class="card-premium reveal text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-microchip"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Microcontrollers</h3>
+            <p class="text-sm text-[var(--text-light)]">ESP32 · STM32 · Arduino · FreeRTOS</p>
+          </article>
+          <article class="card-premium reveal reveal-delay-1 text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-broadcast-tower"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Wireless & Protocols</h3>
+            <p class="text-sm text-[var(--text-light)]">MQTT · BLE · Wi-Fi · LoRa · Modbus</p>
+          </article>
+          <article class="card-premium reveal reveal-delay-2 text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-code"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Firmware & Edge</h3>
+            <p class="text-sm text-[var(--text-light)]">Embedded C/C++ · OTA · Device security</p>
+          </article>
+          <article class="card-premium reveal reveal-delay-3 text-center">
+            <div class="text-4xl mb-4 text-[var(--button-bg)]"><i class="fas fa-cloud"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Cloud & Dashboards</h3>
+            <p class="text-sm text-[var(--text-light)]">AWS IoT · Node.js · Next.js · Grafana</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="certifications">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Validation</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Certifications</h2>
+        <div class="cert-grid">
+          <article class="card-premium reveal">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Oracle AI Foundations</h3>
+                <p class="text-sm text-[var(--text-light)]">Oracle · 2024</p>
+              </div>
+              <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">AI/ML</span>
+            </div>
+            <p class="text-sm text-[var(--text-light)] mt-4">Leveraged AI services to augment predictive maintenance flows.</p>
+            <a href="#" class="text-[var(--button-bg)] font-semibold mt-4">Verify Credential →</a>
+          </article>
+          <article class="card-premium reveal reveal-delay-1">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">IoT (NPTEL)</h3>
+                <p class="text-sm text-[var(--text-light)]">NPTEL · 2025</p>
+              </div>
+              <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">IoT</span>
+            </div>
+            <p class="text-sm text-[var(--text-light)] mt-4">Comprehensive training on embedded comms, gateways, and analytics.</p>
+            <a href="#" class="text-[var(--button-bg)] font-semibold mt-4">Verify Credential →</a>
+          </article>
+          <article class="card-premium reveal reveal-delay-2">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Python for Data Science</h3>
+                <p class="text-sm text-[var(--text-light)]">NPTEL · 2024</p>
+              </div>
+              <span class="badge text-sm font-semibold px-3 py-1 rounded-full bg-[var(--border)] text-[var(--text)]">Data</span>
+            </div>
+            <p class="text-sm text-[var(--text-light)] mt-4">Backbone for analytics, alert thresholds, and on-device ML.</p>
+            <a href="#" class="text-[var(--button-bg)] font-semibold mt-4">Verify Credential →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell scroll-target" id="contact">
+      <div class="section-inner">
+        <p class="reveal text-sm font-semibold uppercase tracking-[0.3em] text-[var(--button-bg)] text-center mb-3">Availability</p>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold text-center mb-10">Contact</h2>
+        <div class="contact-card reveal">
+          <p class="text-center text-[var(--text-light)] mb-6">Need a specialist for telemetry platforms, microcontroller firmware, or edge-to-cloud integrations? Send a note and I’ll respond within one business day.</p>
+          <form action="https://formspree.io/f/xgvygjzd" method="POST" class="space-y-4">
             <div>
-              <label for="name" class="block text-sm font-semibold mb-2" style="color: var(--text);">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your full name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2" style="background: var(--bg); color: var(--text); border-color: var(--border); box-shadow: 0 0 0 2px var(--button-bg);" />
+              <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+              <input id="name" name="name" type="text" required placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--bg)]" />
             </div>
             <div>
-              <label for="email" class="block text-sm font-semibold mb-2" style="color: var(--text);">Email</label>
-              <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-label="Your email address" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2" style="background: var(--bg); color: var(--text); border-color: var(--border);" />
+              <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--bg)]" />
             </div>
             <div>
-              <label for="message" class="block text-sm font-semibold mb-2" style="color: var(--text);">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required aria-label="Your message" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2" style="background: var(--bg); color: var(--text); border-color: var(--border);"></textarea>
+              <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required placeholder="How can I help?" class="w-full px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--bg)]"></textarea>
             </div>
-            <button type="submit" class="w-full font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2" aria-label="Send message to S. Dinesh" style="background: var(--button-bg); color: var(--button-text);">
-              Send Message <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i>
-            </button>
+            <button type="submit" class="btn-primary w-full text-center">Send Message →</button>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="py-8 text-center border-t" style="background: var(--bg); border-color: var(--border);">
-    <div class="container mx-auto px-4">
-      <p class="text-sm" style="color: var(--text-light);">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
-      <p style="color: var(--text-light);">© <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
-    </div>
+  <footer class="text-center py-8 border-t border-[var(--border)]">
+    <p class="text-sm text-[var(--text-light)]">© <span id="current-year"></span> S. Dinesh — IoT & Embedded Systems</p>
   </footer>
-
-  <script>
-    const themes = ["light", "dark", "black"];
-    let current = localStorage.getItem("theme") || "light";
-
-    function applyTheme(t) {
-      document.documentElement.setAttribute("data-theme", t);
-      localStorage.setItem("theme", t);
-
-      document.getElementById("icon-light").style.display = t === "light" ? "inline" : "none";
-      document.getElementById("icon-dark").style.display = t === "dark" ? "inline" : "none";
-      document.getElementById("icon-black").style.display = t === "black" ? "inline" : "none";
-    }
-
-    applyTheme(current);
-
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      let index = themes.indexOf(current);
-      current = themes[(index + 1) % themes.length];
-      applyTheme(current);
-    });
-
-    // Populate Footer Year
-    (function setupFooterYear() {
-      const yearElement = document.getElementById('current-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    })();
-
-    // Typing Effect
-    (function setupTypingEffect() {
-      const typingElement = document.getElementById('typing-effect');
-      const roles = ['IoT Engineer', 'Embedded Systems Designer', 'Hardware Hacker'];
-
-      let roleIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      const typingSpeed = 100;
-      const deletingSpeed = 50;
-      const pauseBetweenRoles = 2000;
-
-      function type() {
-        const currentRole = roles[roleIndex];
-        
-        if (!isDeleting) {
-          if (charIndex < currentRole.length) {
-            typingElement.textContent += currentRole.charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingSpeed);
-          } else {
-            isDeleting = true;
-            setTimeout(type, pauseBetweenRoles);
-          }
-        } else {
-          if (charIndex > 0) {
-            typingElement.textContent = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(type, deletingSpeed);
-          } else {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(type, 500);
-          }
-        }
-      }
-
-      type();
-    })();
-  </script>
 </body>
 </html>

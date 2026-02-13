@@ -13,322 +13,128 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dinesh2841.github.io/">
   <meta property="og:image" content="https://dinesh2841.github.io/assets/images/profile.webp">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="assets/styles.css">
-
-
-  <!-- Apply initial theme early to avoid flash -->
   <script>
     (function applyInitialTheme() {
-      const root = document.documentElement;
       const savedTheme = localStorage.getItem('theme') || 'light';
-      root.setAttribute('data-theme', savedTheme);
-      if (savedTheme === 'dark') {
-        root.classList.add('dark');
-      }
+      document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --text-light: #334155;
-      --border: #e5e7eb;
-      --button-bg: #1e40af;
-      --button-text: #ffffff;
-    }
-
-    /* Dark mode */
-    html[data-theme="dark"] {
-      --bg: #0b1220;
-      --text: #e5e7eb;
-      --text-light: #94a3b8;
-      --border: #1e293b;
-      --button-bg: #3b82f6;
-      --button-text: #ffffff;
-    }
-
-    /* Pure Black */
-    html[data-theme="black"] {
-      --bg: #000000;
-      --text: #ffffff;
-      --text-light: #d1d5db;
-      --border: #222222;
-      --button-bg: #2563eb;
-      --button-text: #ffffff;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    /* Buttons */
-    button, .btn {
-      background: var(--button-bg) !important;
-      color: var(--button-text) !important;
-      border-color: var(--border) !important;
-    }
-
-    /* Base text styles */
-    p, li {
-      color: var(--text-light);
-    }
-
-    a {
-      color: var(--button-bg);
-    }
-
-    span {
-      color: inherit;
-    }
-
-    /* Strong text elements */
-    h1, h2, h3, h4, h5, h6, .title, .role-title {
-      color: var(--text) !important;
-    }
-
-    /* Smooth transitions */
-    body, header, section, footer, main, button {
-      transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
-    }
-    
-    
-    html {
-      scroll-behavior: smooth;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
-    body {
-      background-color: #ffffff;
-      color: #0f172a;
-    }
-    /* Scrollbar styling */
-
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    /* Light scrollbar */
-    html[data-theme="light"] ::-webkit-scrollbar-track,
-    html:not([data-theme]) ::-webkit-scrollbar-track {
-      background-color: #e5e7eb;
-      border-radius: 9999px;
-    }
-    html[data-theme="light"] ::-webkit-scrollbar-thumb,
-    html:not([data-theme]) ::-webkit-scrollbar-thumb {
-      background-color: #3b82f6;
-      border-radius: 9999px;
-    }
-    html[data-theme="light"] ::-webkit-scrollbar-thumb:hover,
-    html:not([data-theme]) ::-webkit-scrollbar-thumb:hover {
-      background-color: #2563eb;
-    }
-    /* Dark scrollbar */
-    html[data-theme="dark"] ::-webkit-scrollbar-track {
-      background-color: #1f2937;
-      border-radius: 9999px;
-    }
-    html[data-theme="dark"] ::-webkit-scrollbar-thumb {
-      background-color: #1d4ed8;
-      border-radius: 9999px;
-    }
-    html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
-      background-color: #1e40af;
-    }
-    /* Black scrollbar */
-    html[data-theme="black"] ::-webkit-scrollbar-track {
-      background-color: #1a1a1a;
-      border-radius: 9999px;
-    }
-    html[data-theme="black"] ::-webkit-scrollbar-thumb {
-      background-color: #404040;
-      border-radius: 9999px;
-    }
-    html[data-theme="black"] ::-webkit-scrollbar-thumb:hover {
-      background-color: #606060;
-    }
-    /* Implement scrollbar-hide utility */
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-    
-    /* Typing effect cursor animation */
-    .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.25em;
-      background-color: currentColor;
-      margin-left: 2px;
-      animation: blink 1s infinite;
-    }
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-    /* Base light theme */
-    html[data-theme="light"] body {
-      background: #ffffff !important;
-      color: #0f172a !important;
-    }
-    /* Tailwind Dark */
-    html[data-theme="dark"] body {
-      background: #0b1220 !important;
-      color: #e5e7eb !important;
-    }
-    /* Pure Black theme */
-    html[data-theme="black"] body {
-      background: #000000 !important;
-      color: #ffffff !important;
-    }
-    /* Fix all sections too */
-    html[data-theme="black"] section,
-    html[data-theme="black"] header,
-    html[data-theme="black"] footer {
-      background: #000000 !important;
-      color: #ffffff !important;
-    }
-    /* Icon visibility */
-    .theme-icon {
-      font-size: 22px;
-      transition: opacity 0.3s ease;
-    }
-    .theme-light { display: none; }
-    .theme-dark { display: none; }
-    .theme-black { display: none; }
-    html[data-theme="light"] .theme-light { display: inline; }
-    html[data-theme="dark"] .theme-dark { display: inline; }
-    html[data-theme="black"] .theme-black { display: inline; }
-  </style>
+  <script defer src="assets/theme.js"></script>
 </head>
 
-<body class="bg-transparent text-current">
-  <header class="sticky top-0 z-50 bg-transparent border-b border-current/10 py-3 transition-colors duration-300">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold tracking-tight text-current">S. Dinesh</a>
-      
-      <!-- Single Theme Toggle Button -->
-        <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition" style="background: var(--button-bg); border-color: var(--border);">
-          <span id="icon-light" aria-hidden="true" style="display:inline; font-size:1.25rem;">☀️</span>
-          <span id="icon-dark" aria-hidden="true" style="display:none; font-size:1.25rem;">🌙</span>
-          <span id="icon-black" aria-hidden="true" style="display:none; font-size:1.25rem;">⚫</span>
-        </button>
+<body class="page-fade bg-[var(--bg)] text-[var(--text)]" data-theme="light">
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <a href="/" class="text-2xl font-bold tracking-tight text-[var(--text)]">S. Dinesh</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#sde" class="nav-link" data-nav-link>SDE</a>
+        <a href="#full-stack" class="nav-link" data-nav-link>Full-Stack</a>
+        <a href="#iot" class="nav-link" data-nav-link>IoT</a>
+        <a href="#resume" class="nav-link" data-nav-link>Resume</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" class="p-3 rounded-full border transition flex items-center justify-center gap-2"></button>
     </div>
   </header>
 
-  <main class="pt-24 pb-32 space-y-32">
-    <!-- Landing Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center px-4 bg-transparent transition-colors duration-300">
-      <div class="max-w-3xl mx-auto text-center">
-        <img src="assets/images/profile.webp" alt="S. Dinesh" class="w-40 h-40 rounded-full mx-auto mb-8 shadow ring-1 object-cover" loading="lazy" decoding="async" />
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-current mb-3">
-          Hi, I'm <span class="text-blue-600">S. Dinesh</span>
-        </h1>
-        <p class="text-lg md:text-xl text-current/70 mb-4 max-w-2xl mx-auto leading-tight">
-          A <span id="typing-effect" class="font-semibold" style="color: var(--button-bg);"></span><span class="cursor" style="color: var(--button-bg);"></span>
-          <br />
-          with expertise across full-stack development, embedded systems, and AI/ML.
-        </p>
-        
-        <!-- Role Selector Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          <!-- SDE Role Card -->
-          <a href="sde/" aria-label="Software Development Engineer portfolio" class="group bg-transparent border border-current/20 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1">
-            <div class="text-4xl mb-4 text-blue-600">
-              <i class="fas fa-code" aria-hidden="true"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-current mb-2 group-hover:text-blue-600 transition-colors">SDE</h2>
-            <p class="text-current/70 text-sm">
-              Full-stack development, backend systems, databases
-            </p>
-          </a>
+  <main>
+    <section class="hero-shell hero-spotlight">
+      <div class="section-inner">
+        <div class="text-center">
+          <img src="assets/images/profile.webp" alt="S. Dinesh" class="reveal w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-6 shadow ring-1 ring-[var(--border)] object-cover" loading="lazy" decoding="async" />
+          <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl font-bold text-center mb-3 text-[var(--text)]">
+            Hi, I'm <span class="text-[var(--button-bg)]">S. Dinesh</span>
+          </h1>
+          <p class="reveal reveal-delay-2 text-lg text-center max-w-2xl mx-auto mb-6 text-[var(--text-light)]">
+            A <span id="typing-effect" class="font-semibold text-[var(--button-bg)]"></span><span class="cursor text-[var(--button-bg)]"></span>
+            <br />
+            with expertise across full-stack development, embedded systems, and AI/ML.
+          </p>
           
-          <!-- Full-Stack Role Card -->
-          <a href="full-stack/" aria-label="Full-Stack developer portfolio" class="group bg-transparent border border-current/20 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1">
-            <div class="text-4xl mb-4 text-green-600">
-              <i class="fas fa-layer-group" aria-hidden="true"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-current mb-2 group-hover:text-green-600 transition-colors">Full-Stack</h2>
-            <p class="text-current/70 text-sm">
-              Frontend + Backend, React, Next.js, Node.js
-            </p>
-          </a>
-          
-          <!-- IoT Role Card -->
-          <a href="iot/" aria-label="IoT engineer portfolio" class="group bg-transparent border border-current/20 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1">
-            <div class="text-4xl mb-4 text-purple-600">
-              <i class="fas fa-microchip" aria-hidden="true"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-current mb-2 group-hover:text-purple-600 transition-colors">IoT</h2>
-            <p class="text-current/70 text-sm">
-              ESP32, Arduino, embedded systems, MQTT
-            </p>
-          </a>
-          
-          <!-- Resume Card -->
-          <a href="resume/" aria-label="Download resume" class="group bg-transparent border border-current/20 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1">
-            <div class="text-4xl mb-4 text-orange-600">
-              <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-current mb-2 group-hover:text-orange-600 transition-colors">Resume</h2>
-            <p class="text-current/70 text-sm">
-              Download & review my resume
-            </p>
-          </a>
-        </div>
+          <!-- Role Selector Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            <!-- SDE Role Card -->
+            <a id="sde" href="sde/" aria-label="Software Development Engineer portfolio" class="card-premium group reveal reveal-delay-1 scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[var(--button-bg)]">
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">SDE</h2>
+                <p class="text-[var(--text-light)]">
+                  Full-stack development, backend systems, databases
+                </p>
+              </div>
+            </a>
+            
+            <!-- Full-Stack Role Card -->
+            <a id="full-stack" href="full-stack/" aria-label="Full-Stack developer portfolio" class="card-premium group reveal reveal-delay-2 scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[#16a34a]">
+                  <i class="fas fa-layer-group" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">Full-Stack</h2>
+                <p class="text-[var(--text-light)]">
+                  Frontend + Backend, React, Next.js, Node.js
+                </p>
+              </div>
+            </a>
+            
+            <!-- IoT Role Card -->
+            <a id="iot" href="iot/" aria-label="IoT engineer portfolio" class="card-premium group reveal reveal-delay-3 scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[#9333ea]">
+                  <i class="fas fa-microchip" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">IoT</h2>
+                <p class="text-[var(--text-light)]">
+                  ESP32, Arduino, embedded systems, MQTT
+                </p>
+              </div>
+            </a>
+            
+            <!-- Resume Card -->
+            <a id="resume" href="resume/" aria-label="Download resume" class="card-premium group reveal scroll-target">
+              <div>
+                <div class="text-4xl mb-4 text-[#ea580c]">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2 text-[var(--text)]">Resume</h2>
+                <p class="text-[var(--text-light)]">
+                  Download & review my resume
+                </p>
+              </div>
+            </a>
+          </div>
 
-        <!-- Quick Links -->
-        <div class="mt-12 flex flex-wrap justify-center gap-3">
-          <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile (opens in new tab)" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-current/10 text-current hover:bg-current/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-current transition-colors duration-200">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
-          </a>
-          <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile (opens in new tab)" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-current/10 text-current hover:bg-current/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-current transition-colors duration-200">
-            <i class="fab fa-github" aria-hidden="true"></i>GitHub
-          </a>
-          <a href="mailto:sevennidinesh@gmail.com" aria-label="Send email to sevennidinesh@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-current/10 text-current hover:bg-current/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-current transition-colors duration-200">
-            <i class="fas fa-envelope" aria-hidden="true"></i>Email
-          </a>
+          <!-- Quick Links -->
+          <div class="flex justify-center gap-4 mt-6 flex-wrap">
+            <a href="https://www.linkedin.com/in/sevinnidinesh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile (opens in new tab)" class="link-pill reveal">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
+            </a>
+            <a href="https://github.com/dinesh2841" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile (opens in new tab)" class="link-pill reveal reveal-delay-1">
+              <i class="fab fa-github" aria-hidden="true"></i>GitHub
+            </a>
+            <a href="mailto:sevennidinesh@gmail.com" aria-label="Send email to sevennidinesh@gmail.com" class="link-pill reveal reveal-delay-2">
+              <i class="fas fa-envelope" aria-hidden="true"></i>Email
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-transparent text-current/70 py-8 text-center border-t border-current/10">
-    <div class="container mx-auto px-4">
-      <p class="text-sm" style="color: inherit;">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
-      <p style="color: inherit;">&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
+  <footer class="py-8 px-4 text-center border-t transition-colors duration-300 bg-[var(--bg)] border-[var(--border)]">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-[var(--text-light)]">Deployed on GitHub Pages • Built with HTML & Tailwind CSS</p>
+      <p class="text-[var(--text-light)]">&copy; <span id="current-year"></span> S. Dinesh. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    const themes = ["light", "dark", "black"];
-    let current = localStorage.getItem("theme") || "light";
-
-    function applyTheme(t) {
-      document.documentElement.setAttribute("data-theme", t);
-      localStorage.setItem("theme", t);
-
-      document.getElementById("icon-light").style.display = t === "light" ? "inline" : "none";
-      document.getElementById("icon-dark").style.display = t === "dark" ? "inline" : "none";
-      document.getElementById("icon-black").style.display = t === "black" ? "inline" : "none";
-    }
-
-    applyTheme(current);
-
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      let index = themes.indexOf(current);
-      current = themes[(index + 1) % themes.length];
-      applyTheme(current);
-    });
-
-    // Populate Footer Year
-    (function setupFooterYear() {
-      const yearElement = document.getElementById('current-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    })();
-
     // Typing Effect
     (function setupTypingEffect() {
       const typingElement = document.getElementById('typing-effect');
