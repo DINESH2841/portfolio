@@ -1,8 +1,6 @@
-name: CI
-on: push
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# .gitignore
+__pycache__/
+*.pyc
 
-# Modified at 2026-06-06T01:41:30.177616
-# Random value: 5834
+# Modified at 2026-06-06T01:41:30.699534
+# Random value: 444
